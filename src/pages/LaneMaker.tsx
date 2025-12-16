@@ -42,6 +42,70 @@ export function LaneMaker() {
             animate={{ scale: [1.1, 1, 1.1], opacity: [0.4, 0.3, 0.4] }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           />
+
+          <motion.div
+            className="absolute top-1/4 right-1/5 opacity-20"
+            animate={{ y: [0, -28, 0], rotate: [0, 10, 0] }}
+            transition={{ duration: 7.2, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <Package className="w-16 h-16 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/3 left-1/4 opacity-15"
+            animate={{ y: [0, 32, 0], x: [0, 12, 0] }}
+            transition={{ duration: 8.8, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
+          >
+            <Network className="w-18 h-18 text-indigo-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-1/3 right-1/4 opacity-20"
+            animate={{ y: [0, -26, 0], rotate: [0, -12, 0] }}
+            transition={{ duration: 6.8, repeat: Infinity, ease: 'easeInOut', delay: 1.4 }}
+          >
+            <Shield className="w-14 h-14 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/2 left-1/5 opacity-15"
+            animate={{ y: [0, 30, 0], x: [0, -10, 0] }}
+            transition={{ duration: 9.2, repeat: Infinity, ease: 'easeInOut', delay: 2.1 }}
+          >
+            <Target className="w-16 h-16 text-blue-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-1/4 left-1/3 opacity-20"
+            animate={{ y: [0, -33, 0], rotate: [0, 14, 0] }}
+            transition={{ duration: 7.8, repeat: Infinity, ease: 'easeInOut', delay: 2.8 }}
+          >
+            <Layers className="w-15 h-15 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-2/3 right-1/3 opacity-15"
+            animate={{ y: [0, 24, 0], x: [0, 8, 0] }}
+            transition={{ duration: 8.3, repeat: Infinity, ease: 'easeInOut', delay: 3.5 }}
+          >
+            <Scale className="w-14 h-14 text-indigo-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/5 left-1/3 opacity-20"
+            animate={{ y: [0, -29, 0], rotate: [0, -15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+          >
+            <FileCheck className="w-16 h-16 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-2/5 right-1/5 opacity-15"
+            animate={{ y: [0, 27, 0], rotate: [0, 16, 0] }}
+            transition={{ duration: 9.8, repeat: Infinity, ease: 'easeInOut', delay: 1.7 }}
+          >
+            <BarChart3 className="w-14 h-14 text-blue-600" />
+          </motion.div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-32">

@@ -93,6 +93,70 @@ export function RouteForge() {
             animate={{ scale: [1.1, 1, 1.1], opacity: [0.4, 0.3, 0.4] }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           />
+
+          <motion.div
+            className="absolute top-1/4 left-1/5 opacity-20"
+            animate={{ y: [0, -25, 0], rotate: [0, 12, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <Truck className="w-16 h-16 text-green-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/3 right-1/4 opacity-15"
+            animate={{ y: [0, 35, 0], x: [0, -15, 0] }}
+            transition={{ duration: 8.5, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
+          >
+            <Route className="w-18 h-18 text-emerald-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-1/3 left-1/4 opacity-20"
+            animate={{ y: [0, -30, 0], rotate: [0, -10, 0] }}
+            transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
+          >
+            <MapPin className="w-14 h-14 text-green-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/2 right-1/5 opacity-15"
+            animate={{ y: [0, 28, 0], x: [0, 12, 0] }}
+            transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 1.8 }}
+          >
+            <Navigation className="w-16 h-16 text-teal-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-1/4 right-1/3 opacity-20"
+            animate={{ y: [0, -32, 0], rotate: [0, 15, 0] }}
+            transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut', delay: 2.4 }}
+          >
+            <Gauge className="w-15 h-15 text-green-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-2/3 left-1/3 opacity-15"
+            animate={{ y: [0, 22, 0], x: [0, -10, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+          >
+            <Fuel className="w-14 h-14 text-emerald-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/5 right-1/3 opacity-20"
+            animate={{ y: [0, -28, 0], rotate: [0, -12, 0] }}
+            transition={{ duration: 6.8, repeat: Infinity, ease: 'easeInOut', delay: 0.9 }}
+          >
+            <DollarSign className="w-16 h-16 text-green-600" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-2/5 left-1/5 opacity-15"
+            animate={{ y: [0, 25, 0], rotate: [0, 18, 0] }}
+            transition={{ duration: 9.5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+          >
+            <TrendingUp className="w-14 h-14 text-teal-600" />
+          </motion.div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-32">

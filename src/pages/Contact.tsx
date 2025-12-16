@@ -90,6 +90,54 @@ export function Contact() {
             animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           />
+
+          <motion.div
+            className="absolute top-1/4 left-1/5 opacity-20"
+            animate={{ y: [0, -32, 0], rotate: [0, 12, 0] }}
+            transition={{ duration: 7.4, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <Mail className="w-16 h-16 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/3 right-1/6 opacity-15"
+            animate={{ y: [0, 38, 0], x: [0, -14, 0] }}
+            transition={{ duration: 8.9, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
+          >
+            <Send className="w-18 h-18 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-1/3 left-1/4 opacity-20"
+            animate={{ y: [0, -27, 0], rotate: [0, -13, 0] }}
+            transition={{ duration: 6.9, repeat: Infinity, ease: 'easeInOut', delay: 1.4 }}
+          >
+            <Phone className="w-14 h-14 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/2 right-1/5 opacity-15"
+            animate={{ y: [0, 31, 0], x: [0, 11, 0] }}
+            transition={{ duration: 9.1, repeat: Infinity, ease: 'easeInOut', delay: 2.1 }}
+          >
+            <MapPin className="w-16 h-16 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-1/4 right-1/3 opacity-20"
+            animate={{ y: [0, -36, 0], rotate: [0, 17, 0] }}
+            transition={{ duration: 7.6, repeat: Infinity, ease: 'easeInOut', delay: 2.8 }}
+          >
+            <Beaker className="w-15 h-15 text-brand-blue" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-2/3 left-1/3 opacity-15"
+            animate={{ y: [0, 25, 0], x: [0, -9, 0] }}
+            transition={{ duration: 8.5, repeat: Infinity, ease: 'easeInOut', delay: 3.5 }}
+          >
+            <Users className="w-14 h-14 text-brand-blue" />
+          </motion.div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4">

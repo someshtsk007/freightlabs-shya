@@ -22,8 +22,10 @@ import { Label } from '@/components/ui/label';
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
+    company: '',
     email: '',
     type: '',
+    volume: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,43 +39,42 @@ export function Contact() {
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', type: '', message: '' });
+      setFormData({ name: '', company: '', email: '', type: '', volume: '', message: '' });
     }, 4000);
   };
 
   const contactTypes = [
     { value: 'carrier', label: 'Carrier', icon: Truck },
     { value: 'shipper', label: 'Shipper', icon: Package },
-    { value: '3pl', label: '3PL / Broker', icon: Building2 },
-    { value: 'investor', label: 'Investor', icon: TrendingUp },
-    { value: 'jobseeker', label: 'Job Seeker', icon: Users },
+    { value: '3pl', label: '3PL Broker', icon: Building2 },
+    { value: 'other', label: 'Other', icon: Users },
   ];
 
   const directLines = [
     {
-      title: 'Shipper Success Chemist',
-      description: 'For shippers looking to optimize their supply chain',
+      title: 'Carrier Relations',
+      description: 'Support for fleets and owner-operators',
       phone: '+1 (555) 123-4567',
-      email: 'shippers@freightlabs.com',
-      icon: Package,
-      bgColor: 'bg-brand-azure dark:bg-brand-navy-light',
-      iconColor: 'text-brand-blue',
-    },
-    {
-      title: 'Carrier Success Engineer',
-      description: 'For carriers ready to automate their revenue',
-      phone: '+1 (555) 234-5678',
       email: 'carriers@freightlabs.com',
       icon: Truck,
       bgColor: 'bg-green-100 dark:bg-green-900/30',
       iconColor: 'text-green-600',
     },
     {
-      title: 'Market Penetration Strategist',
-      description: 'For partnership and investment inquiries',
+      title: 'Shipper Solutions',
+      description: 'Enterprise accounts and capacity planning',
+      phone: '+1 (555) 234-5678',
+      email: 'shippers@freightlabs.com',
+      icon: Package,
+      bgColor: 'bg-brand-azure dark:bg-brand-navy-light',
+      iconColor: 'text-brand-blue',
+    },
+    {
+      title: 'Brokerage Partnerships',
+      description: 'Tools for 3PLs and intermediaries',
       phone: '+1 (555) 345-6789',
       email: 'partnerships@freightlabs.com',
-      icon: TrendingUp,
+      icon: Building2,
       bgColor: 'bg-orange-100 dark:bg-orange-900/30',
       iconColor: 'text-brand-orange',
     },
@@ -148,27 +149,20 @@ export function Contact() {
             className="max-w-4xl mx-auto text-center mb-16"
           >
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-brand-blue/20 shadow-lg mb-8">
-              <Beaker className="w-5 h-5 text-brand-blue" />
-              <span className="font-semibold">Connect with The Lab</span>
+              <Mail className="w-5 h-5 text-brand-blue" />
+              <span className="font-semibold">Contact Us</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
-              Ready to Run an{' '}
+              Let&apos;s Move{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-blue-500 to-brand-blue">
-                Experiment?
+                Freight
               </span>
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Reach out to our team of scientists. We are ready to help you optimize your freight operations.
+              Our team is ready to help you optimize your logistics operations.
             </p>
-
-            <div className="inline-flex items-center gap-3 px-5 py-3 bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl">
-              <Clock className="w-5 h-5 text-green-600" />
-              <p className="text-sm font-medium text-green-800 dark:text-green-200">
-                Our scientists typically respond within <span className="font-bold">2 hours</span> during business operational windows
-              </p>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -183,7 +177,7 @@ export function Contact() {
               className="lg:col-span-3"
             >
               <Card className="p-8 border-2">
-                <h2 className="text-2xl font-bold mb-2">Transmit Your Data</h2>
+                <h2 className="text-2xl font-bold mb-2">Contact Form</h2>
                 <p className="text-muted-foreground mb-8">Fill out the form below and we will get back to you shortly.</p>
 
                 {isSubmitted ? (
@@ -195,40 +189,38 @@ export function Contact() {
                     <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="w-10 h-10 text-green-600" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Data Transmitted Successfully!</h3>
-                    <p className="text-muted-foreground">Our scientists will analyze your request and respond shortly.</p>
+                    <h3 className="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
+                    <p className="text-muted-foreground">Our team will review your request and respond shortly.</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                          id="name"
-                          required
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="Your full name"
-                          className="h-12"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="your.email@company.com"
-                          className="h-12"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input
+                        id="name"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="Your full name"
+                        className="h-12"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Company Name</Label>
+                      <Input
+                        id="company"
+                        required
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        placeholder="Your company name"
+                        className="h-12"
+                      />
                     </div>
 
                     <div className="space-y-2">
                       <Label>I am a:</Label>
-                      <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {contactTypes.map((type) => (
                           <button
                             key={type.value}
@@ -254,6 +246,17 @@ export function Contact() {
                     </div>
 
                     <div className="space-y-2">
+                      <Label htmlFor="volume">Fleet Size / Volume</Label>
+                      <Input
+                        id="volume"
+                        value={formData.volume}
+                        onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
+                        placeholder="e.g., 50 trucks or 1000 loads/month"
+                        className="h-12"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
                       <textarea
                         id="message"
@@ -274,12 +277,12 @@ export function Contact() {
                       {isSubmitting ? (
                         <>
                           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                          Transmitting Data...
+                          Sending Message...
                         </>
                       ) : (
                         <>
                           <Send className="mr-2 w-5 h-5" />
-                          Transmit Data
+                          Send Message
                         </>
                       )}
                     </Button>
@@ -369,10 +372,10 @@ export function Contact() {
             className="text-center max-w-3xl mx-auto mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Direct Lines to Our <span className="text-brand-blue">Scientists</span>
+              Department <span className="text-brand-blue">Contacts</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Connect directly with the specialist who can best address your specific needs.
+              Connect directly with the team that can best help you with your logistics needs.
             </p>
           </motion.div>
 

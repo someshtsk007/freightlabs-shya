@@ -118,19 +118,18 @@ export function LaneMaker() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-blue-hover text-white shadow-lg shadow-brand-blue/20">
                 <Network className="w-4 h-4" />
-                <span className="font-semibold text-sm">LaneMaker™ | The Matching Engine</span>
+                <span className="font-semibold text-sm">LoadForge™ for Shippers & Brokers</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                Operational Velocity for the{' '}
+                The Standard for{' '}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-indigo-600 to-brand-blue">
-                  Modern Supply Chain
+                  Digital Freight Management
                 </span>
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
-                LaneMaker™ cuts through the noise to find the perfect capacity at the right price.
-                Stop paying for empty air. Start matching with science.
+                Source capacity, track shipments, and manage compliance in one unified dashboard.
               </p>
 
               <div className="flex items-center gap-4 p-5 bg-card border-l-4 border-brand-blue rounded-xl shadow-lg">
@@ -138,31 +137,31 @@ export function LaneMaker() {
                   <Clock className="w-7 h-7 text-brand-blue" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">70% Faster</p>
-                  <p className="text-sm text-muted-foreground">Time-to-book vs traditional load boards</p>
+                  <p className="text-sm text-muted-foreground mb-1">The Metric Hook</p>
+                  <p className="text-base font-semibold text-foreground">Reduce your time-to-cover by <strong>50%</strong> using our automated matching engine.</p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-gradient-to-r from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-brand-blue/20 hover:shadow-xl transition-all group">
-                  Request Demo
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/contact">
+                  <Button className="bg-gradient-to-r from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-brand-blue/20 hover:shadow-xl transition-all group">
+                    Request Platform Demo
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
                 <Button variant="outline" className="px-8 py-6 text-lg rounded-xl border-2 border-brand-blue/20 hover:bg-brand-azure dark:hover:bg-brand-navy-light transition-all">
-                  View Pricing
+                  View Features
                 </Button>
               </div>
 
               <div className="flex items-center gap-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-blue">
-                    <AnimatedCounter end={15} suffix="%" />
-                  </div>
-                  <div className="text-sm text-muted-foreground">Carriers Rejected</div>
+                  <div className="text-3xl font-bold text-brand-blue">50%</div>
+                  <div className="text-sm text-muted-foreground">Faster Coverage</div>
                 </div>
                 <div className="h-10 w-px bg-border" />
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-blue">7-Point</div>
+                  <div className="text-3xl font-bold text-brand-blue">8-Point</div>
                   <div className="text-sm text-muted-foreground">Safety Check</div>
                 </div>
                 <div className="h-10 w-px bg-border" />
@@ -193,7 +192,7 @@ export function LaneMaker() {
                           <Network className="w-6 h-6 text-brand-blue" />
                         </div>
                         <div>
-                          <p className="font-semibold">LaneMaker Dashboard</p>
+                          <p className="font-semibold">LoadForge Dashboard</p>
                           <p className="text-sm text-white/70">Live Matching</p>
                         </div>
                       </div>
@@ -267,29 +266,19 @@ export function LaneMaker() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center">
-                  <Package className="w-6 h-6 text-brand-blue" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">For Shippers</h3>
-                  <p className="text-brand-blue font-semibold">The Efficiency Equation</p>
-                </div>
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold mb-4">Core Capabilities</h3>
               </div>
-
-              <p className="text-lg text-muted-foreground mb-8">
-                Reduce shipping costs without compromising speed. See exactly where your freight is and who is moving it.
-              </p>
 
               <div className="space-y-6">
                 <Card className="p-5 border-2 hover:border-brand-blue/50 transition-all">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
-                      <TrendingDown className="w-5 h-5 text-brand-blue" />
+                      <Network className="w-5 h-5 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Cost Reduction</h4>
-                      <p className="text-sm text-muted-foreground">Data-driven matching that finds the optimal rate without compromising on quality or speed.</p>
+                      <h4 className="font-bold mb-1">Smart Capacity Sourcing</h4>
+                      <p className="text-sm text-muted-foreground">Identify carriers who frequent your lanes to build a reliable &quot;virtual fleet.&quot;</p>
                     </div>
                   </div>
                 </Card>
@@ -300,8 +289,8 @@ export function LaneMaker() {
                       <Eye className="w-5 h-5 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Full Transparency</h4>
-                      <p className="text-sm text-muted-foreground">Real-time visibility into every mile. Know exactly where your freight is at all times.</p>
+                      <h4 className="font-bold mb-1">Real-Time Tracking</h4>
+                      <p className="text-sm text-muted-foreground">Integration with ELDs provides 24/7 visibility into shipment location.</p>
                     </div>
                   </div>
                 </Card>
@@ -309,11 +298,11 @@ export function LaneMaker() {
                 <Card className="p-5 border-2 hover:border-brand-blue/50 transition-all">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-5 h-5 text-brand-blue" />
+                      <BarChart3 className="w-5 h-5 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Safety First</h4>
-                      <p className="text-sm text-muted-foreground">We reject 15% of carriers that do not meet our Lab Safety Standards. Only verified carriers touch your goods.</p>
+                      <h4 className="font-bold mb-1">Dynamic Pricing Models</h4>
+                      <p className="text-sm text-muted-foreground">Access real-time rate indices to benchmark your freight spend.</p>
                     </div>
                   </div>
                 </Card>
@@ -325,53 +314,46 @@ export function LaneMaker() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center">
-                  <Building2 className="w-6 h-6 text-amber-600" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">For 3PLs & Brokers</h3>
-                  <p className="text-amber-600 font-semibold">Execution Automation</p>
-                </div>
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold mb-4">For Brokers</h3>
+                <p className="text-lg text-muted-foreground">
+                  LoadForge™ Pro accelerates your brokerage operations with high-volume execution tools.
+                </p>
               </div>
 
-              <p className="text-lg text-muted-foreground mb-8">
-                Supercharge your team. One broker using LaneMaker™ can do the work of five using manual boards.
-              </p>
-
               <div className="space-y-6">
-                <Card className="p-5 border-2 hover:border-amber-500/50 transition-all">
+                <Card className="p-5 border-2 hover:border-brand-blue/50 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
-                      <Users className="w-5 h-5 text-amber-600" />
+                    <div className="w-10 h-10 rounded-lg bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-5 h-5 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">5x Team Productivity</h4>
-                      <p className="text-sm text-muted-foreground">Scale your brokerage to 50+ loads per broker without adding headcount or overhead.</p>
+                      <h4 className="font-bold mb-1">5x Faster Matching</h4>
+                      <p className="text-sm text-muted-foreground">Cover loads in minutes, not hours, by matching freight to live truck assets.</p>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="p-5 border-2 hover:border-amber-500/50 transition-all">
+                <Card className="p-5 border-2 hover:border-brand-blue/50 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
-                      <Target className="w-5 h-5 text-amber-600" />
+                    <div className="w-10 h-10 rounded-lg bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
+                      <Users className="w-5 h-5 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Closed-Loop Network</h4>
-                      <p className="text-sm text-muted-foreground">Keep carriers in your network longer by automatically booking their backhauls.</p>
+                      <h4 className="font-bold mb-1">Scale Operations</h4>
+                      <p className="text-sm text-muted-foreground">Enable your team to handle 50+ loads per broker without adding headcount.</p>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="p-5 border-2 hover:border-amber-500/50 transition-all">
+                <Card className="p-5 border-2 hover:border-brand-blue/50 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
-                      <Gauge className="w-5 h-5 text-amber-600" />
+                    <div className="w-10 h-10 rounded-lg bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
+                      <Gauge className="w-5 h-5 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Operational Velocity</h4>
-                      <p className="text-sm text-muted-foreground">Handle more volume with fewer clicks. Automated load selection from departure to return.</p>
+                      <h4 className="font-bold mb-1">Automated Workflows</h4>
+                      <p className="text-sm text-muted-foreground">Reduce administrative overhead with smart automation tools.</p>
                     </div>
                   </div>
                 </Card>
@@ -390,22 +372,23 @@ export function LaneMaker() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              The <span className="text-brand-blue">7-Point</span> Compliance Check
+              The <span className="text-brand-blue">8-Point</span> Compliance Check
             </h2>
             <p className="text-xl text-muted-foreground">
-              Every carrier. Every load. No exceptions. Our Compliance Automation ensures only verified carriers with valid authority touch your goods.
+              We take risk off the road. Our automated system validates every carrier against <strong>8 strict safety protocols</strong> before dispatch. We automatically reject carriers that don&apos;t meet these standards.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
             {[
-              { icon: FileCheck, label: 'Authority Status' },
-              { icon: Shield, label: 'Insurance Valid' },
-              { icon: Truck, label: 'Safety Rating' },
-              { icon: Users, label: 'EIN/TIN Check' },
-              { icon: BarChart3, label: 'Operating History' },
-              { icon: Target, label: 'Equipment Match' },
-              { icon: CheckCircle2, label: 'Final Approval' },
+              { icon: FileCheck, label: 'Authority Status (Active MC/DOT)' },
+              { icon: Shield, label: 'Insurance Coverage' },
+              { icon: Truck, label: 'FMCSA Safety Rating' },
+              { icon: BarChart3, label: 'Inspection History' },
+              { icon: CheckCircle2, label: 'Fraud & Double-Brokering Check' },
+              { icon: Target, label: 'Equipment Type Validation' },
+              { icon: Users, label: 'Operational History' },
+              { icon: Shield, label: 'Driver Identity Verification' },
             ].map((item, index) => (
               <motion.div
                 key={item.label}
@@ -489,19 +472,21 @@ export function LaneMaker() {
             className="text-center max-w-3xl mx-auto text-white"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Stop paying for empty air. Start matching with science.
+              Optimize your supply chain with industrial-grade tech
             </h2>
             <p className="text-xl text-white/80 mb-8">
-              Join the network of shippers and 3PLs who have revolutionized their freight operations.
+              Join the network of shippers and 3PLs using LoadForge to streamline their operations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-brand-blue hover:bg-blue-50 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group">
-                Initialize LaneMaker
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-white text-brand-blue hover:bg-blue-50 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group">
+                  Access LoadForge
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Link to="/contact">
                 <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-xl">
-                  Talk to a Scientist
+                  Contact Sales
                 </Button>
               </Link>
             </div>

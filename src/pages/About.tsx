@@ -27,18 +27,18 @@ export function About() {
   const principles = [
     {
       icon: Target,
-      title: 'Obsess Over the Freight Ecosystem',
-      description: 'Shippers, carriers, and 3PLs are our north star. Every decision is evaluated through the lens of ecosystem value.',
+      title: 'Precision',
+      description: 'We believe in accurate data and reliable execution.',
+    },
+    {
+      icon: Lightbulb,
+      title: 'Transparency',
+      description: 'No hidden fees, no black-box pricing. Just honest freight.',
     },
     {
       icon: Zap,
-      title: 'Bias for Intelligent Action',
-      description: 'Speed matters, but AI-driven decision-making matters more. We move fast, but we move smart.',
-    },
-    {
-      icon: BarChart3,
-      title: 'Data or it Did Not Happen',
-      description: 'Reasoning beats rank. Metrics are truth. We do not care about titles, we care about data.',
+      title: 'Efficiency',
+      description: 'We are obsessed with eliminating waste—whether it\'s empty miles or wasted time.',
     },
   ];
 
@@ -179,17 +179,20 @@ export function About() {
               className="space-y-8"
             >
               <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                <Beaker className="w-5 h-5 text-brand-blue" />
-                <span className="font-semibold">Welcome to The Lab</span>
+                <Brain className="w-5 h-5 text-brand-blue" />
+                <span className="font-semibold">Our Company</span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                We are <span className="text-brand-blue">Scientists</span> of Efficiency
+                Building the <span className="text-brand-blue">Digital Infrastructure</span> of Logistics
               </h1>
 
               <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                At FreightLabs, we do not just move boxes. We experiment. We innovate. We engineer breakthroughs.
-                Every decision we make is backed by data points, not gut feelings.
+                We combine deep industry experience with advanced technology to solve freight&apos;s toughest challenges.
+              </p>
+
+              <p className="text-lg text-blue-200/80 max-w-2xl mx-auto italic">
+                Decisions based on data, not opinions.
               </p>
 
               <div className="flex items-center justify-center gap-8 pt-8">
@@ -230,16 +233,24 @@ export function About() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-azure dark:bg-brand-navy border border-brand-blue/20 mb-6">
-              <Microscope className="w-4 h-4 text-brand-blue" />
-              <span className="text-sm font-semibold text-brand-blue">Our Philosophy</span>
+              <Users className="w-4 h-4 text-brand-blue" />
+              <span className="text-sm font-semibold text-brand-blue">Who We Are</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              The <span className="text-brand-blue">FreightLabs</span> Way
+              <span className="text-brand-blue">Logistics Experts.</span> Technology Natives.
             </h2>
             <p className="text-xl text-muted-foreground">
-              We believe in Experimentation over Ego and Data over Opinions. We try, test, learn, and iterate.
-              This is not a brokerage. This is a laboratory.
+              FreightLabs was founded on a belief that the trucking industry deserves better tools. We aren&apos;t just software developers; we are logistics professionals who understand the difference between a dry van and a reefer. We use AI to empower the human element, giving shippers and carriers the <strong>predictive data</strong> they need to make smarter business decisions.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-12 mt-16"
+          >
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h3>
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
@@ -367,24 +378,24 @@ export function About() {
               
               <div className="relative z-10 text-center">
                 <div className="w-20 h-20 rounded-2xl bg-brand-blue/20 flex items-center justify-center mx-auto mb-6">
-                  <GraduationCap className="w-10 h-10 text-brand-blue" />
+                  <Users className="w-10 h-10 text-brand-blue" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Do You Have the DNA of a Scientist?
+                  Ready to partner with a team that understands your business?
                 </h2>
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                  We are always looking for curious minds who want to experiment, innovate, and reshape the future of logistics.
+                  Let&apos;s work together to transform your freight operations with data-driven solutions.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link to="/careers">
+                  <Link to="/contact">
                     <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group">
-                      View Career Openings
+                      Contact Our Team
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
-                  <Link to="/contact">
+                  <Link to="/routeforge">
                     <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-xl">
-                      Contact Us
+                      View Products
                     </Button>
                   </Link>
                 </div>

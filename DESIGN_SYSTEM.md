@@ -1549,6 +1549,283 @@ will-change: transform
 
 ---
 
+## Contact Modal & Lead Capture System
+
+### Overview
+FreightLabs uses an intelligent modal-based lead capture system that opens from strategic CTAs throughout the site. The modal is designed for minimal friction while collecting meaningful qualification data.
+
+### ContactModal Component
+
+#### Features
+- Beautiful, responsive design with smooth animations
+- Pre-fills product interest based on source
+- Visual user type selection (Carrier, Shipper, 3PL, Other)
+- Product interest selection with descriptions
+- Real-time form validation
+- Success state with automatic close
+- Integrated with Supabase for lead storage
+
+#### Implementation
+```tsx
+import { ContactModal } from '@/components/shared/ContactModal';
+
+function Page() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsModalOpen(true)}>
+        Request Demo
+      </Button>
+
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        defaultInterest="routeforge"  // Pre-select product
+        source="homepage_hero"         // Track source
+      />
+    </>
+  );
+}
+```
+
+#### Props
+```typescript
+interface ContactModalProps {
+  isOpen: boolean;              // Control modal visibility
+  onClose: () => void;          // Close handler
+  defaultInterest?: 'routeforge' | 'loadforge' | 'both' | 'general';
+  source?: string;              // Track where lead came from
+}
+```
+
+#### Modal Styling
+```jsx
+// Modal backdrop
+className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+
+// Modal container
+className="w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+
+// Modal card
+className="relative bg-card border-2 shadow-2xl"
+```
+
+### CTA Strategy
+
+#### Primary CTAs (Modal Triggers)
+**Purpose:** Capture qualified leads for demo requests
+
+**Button Style:**
+```jsx
+className="bg-brand-orange hover:bg-brand-orange-hover
+           text-white px-8 py-6 text-lg rounded-xl
+           shadow-lg hover:shadow-xl transition-all group"
+```
+
+**Common Labels:**
+- "Request Platform Demo"
+- "Schedule a Demo"
+- "Get Started with [Product]"
+
+**Implementation Pattern:**
+```tsx
+<Button
+  onClick={() => {
+    setModalSource('homepage_hero');
+    setModalInterest('general');
+    setIsModalOpen(true);
+  }}
+  className="bg-brand-orange hover:bg-brand-orange-hover text-white..."
+>
+  Request Demo
+  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+</Button>
+```
+
+#### Secondary CTAs (Direct Navigation)
+**Purpose:** Guide users to more information or contact page
+
+**Button Styles:**
+```jsx
+// Outline style
+className="border-2 hover:bg-accent px-8 py-6 rounded-xl"
+
+// White on color
+className="bg-white text-brand-blue hover:bg-blue-50
+           px-8 py-6 rounded-xl shadow-lg"
+```
+
+**Common Labels:**
+- "Contact Sales Team"
+- "Learn More"
+- "View Features"
+- "Talk to Sales"
+
+### Source Tracking
+
+Track where leads come from for analytics:
+
+```typescript
+// Homepage sources
+'homepage_hero'
+'homepage_routeforge_section'
+'homepage_loadforge_section'
+'homepage_bottom_cta'
+
+// Product page sources
+'routeforge_hero'
+'routeforge_bottom_cta'
+'loadforge_hero'
+'loadforge_bottom_cta'
+
+// Contact page
+'contact_page_demo_cta'
+'contact_page_form'
+```
+
+### Form Fields
+
+#### Required Fields
+- Full Name
+- Email Address
+- Company Name
+- User Type (Carrier, Shipper, 3PL, Other)
+- Product Interest
+
+#### Optional Fields
+- Phone Number
+- Additional Message/Details
+
+### User Type Selection
+
+Visual button grid with icons:
+
+```tsx
+const userTypes = [
+  { value: 'carrier', label: 'Carrier', icon: Truck, color: 'green' },
+  { value: 'shipper', label: 'Shipper', icon: Package, color: 'blue' },
+  { value: '3pl', label: '3PL/Broker', icon: Building2, color: 'amber' },
+  { value: 'other', label: 'Other', icon: Users, color: 'gray' },
+];
+```
+
+### Success State
+
+After successful submission:
+- Green checkmark animation
+- "Thank You!" message
+- "Our team will reach out within 24 hours"
+- Auto-close after 2.5 seconds
+
+### Database Schema
+
+Leads stored in Supabase with this structure:
+
+```sql
+CREATE TABLE leads (
+  id uuid PRIMARY KEY,
+  name text NOT NULL,
+  email text NOT NULL,
+  company text NOT NULL,
+  phone text,
+  user_type text NOT NULL,
+  interest text NOT NULL,
+  message text,
+  source text NOT NULL,
+  status text DEFAULT 'new',
+  created_at timestamptz DEFAULT now()
+);
+```
+
+### Best Practices
+
+#### DO:
+- Use modal for primary conversion CTAs
+- Track source for every lead
+- Pre-select product interest based on page context
+- Provide clear success feedback
+- Auto-close modal after success
+- Use descriptive button labels
+- Keep forms short and focused
+
+#### DON'T:
+- Ask for unnecessary information
+- Use generic "Submit" labels
+- Open modal on page load (user-initiated only)
+- Forget to handle loading states
+- Skip error handling
+- Use vague source names
+
+### CTA Placement Strategy
+
+#### Homepage
+- Hero section: General platform demo
+- Product sections: Product-specific demos
+- Bottom CTA: General conversion
+
+#### Product Pages
+- Hero section: Product-specific demo
+- Features section: Optional secondary CTA
+- Bottom section: Product-specific conversion
+
+#### Contact Page
+- Demo CTA: Quick access to modal
+- Full form: Alternative for detailed inquiries
+
+### Contact Information CTAs
+
+#### Phone CTA
+```jsx
+<a
+  href="tel:+18175208170"
+  className="flex items-center gap-2 text-brand-blue hover:underline"
+>
+  <Phone className="w-4 h-4" />
+  +1 817 520 8170
+</a>
+```
+
+#### Email CTA
+```jsx
+<a
+  href="mailto:info@FreightLabs.io"
+  className="flex items-center gap-2 text-brand-blue hover:underline"
+>
+  <Mail className="w-4 h-4" />
+  info@FreightLabs.io
+</a>
+```
+
+#### Address Display
+```jsx
+<div className="flex items-start gap-3">
+  <MapPin className="w-5 h-5 text-brand-blue flex-shrink-0" />
+  <div>
+    <p>1621 Central Avenue, Suite 58586</p>
+    <p>Cheyenne, WY 82201</p>
+  </div>
+</div>
+```
+
+---
+
+## Company Information
+
+### Contact Details
+- **Address:** 1621 Central Avenue, Suite 58586, Cheyenne, WY 82201
+- **Phone:** +1 817 520 8170
+- **Email:** info@FreightLabs.io
+- **Website:** freightlabs.io
+
+### Business Hours
+- **Monday - Friday:** 6:00 AM - 8:00 PM PST
+- **Saturday:** 8:00 AM - 4:00 PM PST
+- **Sunday:** Emergency Only
+- **AI Systems:** 24/7 automated matching and dispatch
+
+---
+
 **End of Design System Documentation**
 
 *For questions or updates, refer to this document when implementing new features or pages for FreightLabs.*

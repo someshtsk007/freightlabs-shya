@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 
@@ -125,13 +125,29 @@ export function Header() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.2 }}
-                className="px-4 pt-3"
+                className="px-4 pt-3 pb-2 space-y-3"
               >
                 <Link to="/contact">
                   <Button className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white shadow-lg">
                     Get Started
                   </Button>
                 </Link>
+                <div className="pt-2 space-y-2 border-t border-border">
+                  <a
+                    href="tel:+18175208170"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors px-4 py-2"
+                  >
+                    <Phone className="w-4 h-4" />
+                    +1 817 520 8170
+                  </a>
+                  <a
+                    href="mailto:info@FreightLabs.io"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors px-4 py-2"
+                  >
+                    <Mail className="w-4 h-4" />
+                    info@FreightLabs.io
+                  </a>
+                </div>
               </motion.div>
             </nav>
           </motion.div>

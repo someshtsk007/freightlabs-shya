@@ -57,8 +57,8 @@ export function Contact() {
     {
       title: 'Carrier Relations',
       description: 'Support for fleets and owner-operators',
-      phone: '+1 (555) 123-4567',
-      email: 'carriers@freightlabs.com',
+      phone: '+1 817 520 8170',
+      email: 'carriers@freightlabs.io',
       icon: Truck,
       bgColor: 'bg-green-100 dark:bg-green-900/30',
       iconColor: 'text-green-600',
@@ -66,8 +66,8 @@ export function Contact() {
     {
       title: 'Shipper Solutions',
       description: 'Enterprise accounts and capacity planning',
-      phone: '+1 (555) 234-5678',
-      email: 'shippers@freightlabs.com',
+      phone: '+1 817 520 8170',
+      email: 'shippers@freightlabs.io',
       icon: Package,
       bgColor: 'bg-brand-azure dark:bg-brand-navy-light',
       iconColor: 'text-brand-blue',
@@ -75,8 +75,8 @@ export function Contact() {
     {
       title: 'Brokerage Partnerships',
       description: 'Tools for 3PLs and intermediaries',
-      phone: '+1 (555) 345-6789',
-      email: 'partnerships@freightlabs.com',
+      phone: '+1 817 520 8170',
+      email: 'partnerships@freightlabs.io',
       icon: Building2,
       bgColor: 'bg-amber-100 dark:bg-amber-900/30',
       iconColor: 'text-amber-600',
@@ -257,8 +257,8 @@ export function Contact() {
                   <div>
                     <h3 className="font-bold text-lg mb-1">Corporate HQ</h3>
                     <p className="text-muted-foreground">
-                      123 Innovation Drive<br />
-                      Silicon Valley, CA 94025<br />
+                      1621 Central Avenue, Suite 58586<br />
+                      Cheyenne, WY 82201<br />
                       United States
                     </p>
                   </div>
@@ -269,8 +269,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">General Inquiries</h3>
-                    <a href="mailto:info@freightlabs.com" className="text-brand-blue hover:underline">
-                      info@freightlabs.com
+                    <a href="mailto:info@FreightLabs.io" className="text-brand-blue hover:underline">
+                      info@FreightLabs.io
                     </a>
                   </div>
                 </div>
@@ -280,7 +280,9 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Main Line</h3>
-                    <p className="text-muted-foreground">+1 (555) 000-0000</p>
+                    <a href="tel:+18175208170" className="text-brand-blue hover:underline">
+                      +1 817 520 8170
+                    </a>
                   </div>
                 </div>
               </Card>

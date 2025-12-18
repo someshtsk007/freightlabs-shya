@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -17,6 +17,29 @@ export function Footer() {
             <p className="text-sm text-muted-foreground mb-4">
               The Science of Moving Freight. Building the most trusted, intelligent logistics ecosystem.
             </p>
+            <div className="space-y-2 mb-4">
+              <a
+                href="tel:+18175208170"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                +1 817 520 8170
+              </a>
+              <a
+                href="mailto:info@FreightLabs.io"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                info@FreightLabs.io
+              </a>
+              <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>
+                  1621 Central Avenue, Suite 58586<br />
+                  Cheyenne, WY 82201
+                </span>
+              </div>
+            </div>
             <div className="flex items-center gap-3">
               <a
                 href="https://linkedin.com"
@@ -33,12 +56,6 @@ export function Footer() {
                 className="w-9 h-9 rounded-lg bg-accent hover:bg-primary/10 flex items-center justify-center transition-colors group"
               >
                 <Twitter className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
-              </a>
-              <a
-                href="mailto:info@freightlabs.com"
-                className="w-9 h-9 rounded-lg bg-accent hover:bg-primary/10 flex items-center justify-center transition-colors group"
-              >
-                <Mail className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
               </a>
             </div>
           </div>

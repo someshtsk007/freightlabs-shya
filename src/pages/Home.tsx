@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { withGPU } from '@/lib/animation';
 import {
   ArrowRight,
   Truck,
@@ -35,6 +36,7 @@ export function Home() {
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute -top-1/2 -right-1/2 w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-brand-blue/10 to-brand-azure opacity-50 blur-3xl"
+            style={withGPU()}
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -48,6 +50,7 @@ export function Home() {
 
           <motion.div
             className="absolute top-1/4 left-1/4 opacity-20"
+            style={withGPU()}
             animate={{ y: [0, -30, 0], rotate: [0, 10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
           >
@@ -56,6 +59,7 @@ export function Home() {
 
           <motion.div
             className="absolute top-1/3 right-1/3 opacity-15"
+            style={withGPU()}
             animate={{ y: [0, 40, 0], rotate: [0, -15, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
           >
@@ -64,6 +68,7 @@ export function Home() {
 
           <motion.div
             className="absolute bottom-1/3 left-1/3 opacity-20"
+            style={withGPU()}
             animate={{ y: [0, -25, 0], x: [0, 15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
           >
@@ -72,6 +77,7 @@ export function Home() {
 
           <motion.div
             className="absolute top-1/2 right-1/4 opacity-15"
+            style={withGPU()}
             animate={{ y: [0, 30, 0], rotate: [0, 20, 0] }}
             transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
           >
@@ -80,6 +86,7 @@ export function Home() {
 
           <motion.div
             className="absolute bottom-1/4 right-1/3 opacity-20"
+            style={withGPU()}
             animate={{ y: [0, -35, 0], x: [0, -10, 0] }}
             transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
           >
@@ -88,6 +95,7 @@ export function Home() {
 
           <motion.div
             className="absolute top-2/3 left-1/4 opacity-15"
+            style={withGPU()}
             animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
             transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
           >
@@ -96,6 +104,7 @@ export function Home() {
 
           <motion.div
             className="absolute top-1/4 right-1/4 opacity-20"
+            style={withGPU()}
             animate={{ y: [0, -20, 0], x: [0, 20, 0] }}
             transition={{ duration: 8.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
           >
@@ -104,6 +113,7 @@ export function Home() {
 
           <motion.div
             className="absolute bottom-1/2 left-1/5 opacity-15"
+            style={withGPU()}
             animate={{ y: [0, 30, 0], rotate: [0, 15, 0] }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
           >
@@ -117,12 +127,14 @@ export function Home() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              style={withGPU()}
               className="space-y-8"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
+                style={withGPU()}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card backdrop-blur-sm border border-brand-blue/20 shadow-sm"
               >
                 <Brain className="w-4 h-4 text-brand-blue" />
@@ -193,6 +205,7 @@ export function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
+              style={withGPU()}
               className="relative"
             >
               <div className="relative bg-card backdrop-blur-sm rounded-3xl p-2 border-2 border-border shadow-2xl overflow-hidden group">
@@ -208,6 +221,7 @@ export function Home() {
                   <div className="relative z-10 text-center">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
+                      style={withGPU()}
                       className="w-20 h-20 rounded-full bg-brand-orange/90 backdrop-blur-md border border-white/20 flex items-center justify-center cursor-pointer mb-4 mx-auto shadow-lg shadow-brand-orange/30"
                     >
                       <Play className="w-8 h-8 text-white ml-1" />

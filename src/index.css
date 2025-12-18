@@ -67,3 +67,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: auto;
+  }
+}

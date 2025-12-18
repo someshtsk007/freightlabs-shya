@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
+import { BrandLogo } from '@/components/BrandLogo';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,11 +43,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3 group">
-            <img
-              src="/freightlabs-no_background.png"
-              alt="FreightLabs Logo"
-              className="h-12 w-auto group-hover:scale-105 transition-transform"
-            />
+            <BrandLogo className="h-8 w-auto group-hover:scale-105 transition-transform" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

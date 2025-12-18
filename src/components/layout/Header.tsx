@@ -26,7 +26,7 @@ export function Header() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/routeforge', label: 'RouteForge™' },
-    { path: '/lanemaker', label: 'LaneMaker™' },
+    { path: '/loadforge', label: 'LoadForge™' },
     { path: '/about', label: 'About Us' },
     { path: '/contact', label: 'Contact' },
   ];

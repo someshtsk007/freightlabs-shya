@@ -269,7 +269,7 @@ className="border-2 hover:bg-accent px-8 py-6 text-lg rounded-xl"
 /* Carrier/RouteForge */
 from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700
 
-/* Shipper/LaneMaker */
+/* Shipper/LoadForge */
 from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700
 
 /* 3PL/Broker */
@@ -769,7 +769,7 @@ shadow-green-500/20      // Green glow
   - Brand hexagon with circuit design
   - FreightLabs wordmark
   - Tagline: "Engineering Smarter Freight Solutions"
-  - Feature badges: RouteForge™, LaneMaker™, AI-Powered Tech
+  - Feature badges: RouteForge™, LoadForge™, AI-Powered Tech
   - Brand colors: Blue (#3B82F6) and Orange (#F97316)
 
 ### Meta Tags

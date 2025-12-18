@@ -52,8 +52,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/lanemaker" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  LaneMaker™
+                <Link to="/loadforge" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  LoadForge™
                 </Link>
               </li>
             </ul>

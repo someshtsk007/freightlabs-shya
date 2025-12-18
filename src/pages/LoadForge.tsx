@@ -25,7 +25,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { AnimatedCounter } from '@/components/shared/AnimatedCounter';
 
-export function LaneMaker() {
+export function LoadForge() {
   return (
     <div className="min-h-screen">
       <section className="relative min-h-screen bg-gradient-to-br from-brand-azure via-blue-50/50 to-indigo-50/30 dark:from-brand-navy dark:via-blue-950/30 dark:to-indigo-950/20 overflow-hidden">

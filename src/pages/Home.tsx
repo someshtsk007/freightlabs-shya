@@ -264,7 +264,7 @@ export function Home() {
               <Target className="w-4 h-4 text-brand-blue" />
               <span className="text-sm font-semibold text-brand-blue">Choose Your Path</span>
             </motion.div>
-            <MaskedTextReveal className="mb-4">
+            <MaskedTextReveal className="mb-4" useViewportTrigger={true}>
               <h2 className="text-fluid-3xl font-bold">
                 Built for the Backbone of the Supply Chain
               </h2>
@@ -484,7 +484,7 @@ export function Home() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <MaskedTextReveal>
+                <MaskedTextReveal useViewportTrigger={true}>
                   <h2 className="text-fluid-3xl font-bold">
                     Dispatch Automation for the Modern Fleet
                   </h2>
@@ -678,7 +678,7 @@ export function Home() {
                 <Zap className="w-4 h-4 text-brand-orange" />
                 <span className="text-sm font-semibold text-brand-orange">Data Over Opinions</span>
               </div>
-              <MaskedTextReveal className="mb-4">
+              <MaskedTextReveal className="mb-4" useViewportTrigger={true}>
                 <h2 className="text-fluid-3xl font-bold">
                   Technology Built for the <span className="text-brand-blue">Long Haul</span>
                 </h2>

@@ -1266,10 +1266,18 @@ revealViewport = {
 Wraps headlines with overflow-hidden masks for upward reveal effect:
 
 ```tsx
+// For hero sections (visible on load)
 <MaskedTextReveal className="mb-4" delay={0.2}>
   <h1 className="text-fluid-4xl font-bold">
     Your Headline Text
   </h1>
+</MaskedTextReveal>
+
+// For section headers (trigger on scroll)
+<MaskedTextReveal className="mb-4" useViewportTrigger={true}>
+  <h2 className="text-fluid-3xl font-bold">
+    Section Headline
+  </h2>
 </MaskedTextReveal>
 ```
 
@@ -1278,10 +1286,15 @@ Wraps headlines with overflow-hidden masks for upward reveal effect:
 - Animates to `y: 0` (visible)
 - Combined with opacity fade-in
 - Optional delay parameter for sequencing
+- Optional `useViewportTrigger` for scroll-based animation
+
+**Props:**
+- `delay?: number` - Delay before animation starts (default: 0)
+- `useViewportTrigger?: boolean` - Use scroll trigger instead of immediate animation (default: false)
 
 **Usage Guidelines:**
-- Main page headlines
-- Section titles
+- Main page headlines - use default (no viewport trigger)
+- Section titles below fold - use `useViewportTrigger={true}`
 - Call-to-action text
 - Any text needing dramatic reveal
 

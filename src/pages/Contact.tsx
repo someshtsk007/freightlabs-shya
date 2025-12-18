@@ -75,8 +75,8 @@ export function Contact() {
       phone: '+1 (555) 345-6789',
       email: 'partnerships@freightlabs.com',
       icon: Building2,
-      bgColor: 'bg-orange-100 dark:bg-orange-900/30',
-      iconColor: 'text-brand-orange',
+      bgColor: 'bg-amber-100 dark:bg-amber-900/30',
+      iconColor: 'text-amber-600',
     },
   ];
 
@@ -154,10 +154,7 @@ export function Contact() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
-              Let&apos;s Move{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-blue-500 to-brand-blue">
-                Freight
-              </span>
+              Let&apos;s Move Freight
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -303,7 +300,7 @@ export function Contact() {
                     <MapPin className="w-6 h-6 text-brand-blue" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Corporate HQ (The Lab)</h3>
+                    <h3 className="font-bold text-lg mb-1">Corporate HQ</h3>
                     <p className="text-muted-foreground">
                       123 Innovation Drive<br />
                       Silicon Valley, CA 94025<br />
@@ -335,8 +332,8 @@ export function Contact() {
 
               <Card className="p-6 border-2 bg-gradient-to-br from-brand-navy to-brand-navy-light text-white">
                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                  <Beaker className="w-5 h-5 text-brand-blue" />
-                  Lab Hours
+                  <Clock className="w-5 h-5 text-brand-blue" />
+                  Business Hours
                 </h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
@@ -423,10 +420,10 @@ export function Contact() {
               Prefer to Schedule a Demo?
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Book a personalized walkthrough of our platform with one of our freight scientists.
+              Book a personalized walkthrough of our platform with one of our logistics experts.
             </p>
             <Button className="bg-white text-brand-blue hover:bg-blue-50 px-8 py-6 text-lg rounded-xl shadow-lg">
-              Schedule a Demo
+              Request Platform Demo
             </Button>
           </motion.div>
         </div>

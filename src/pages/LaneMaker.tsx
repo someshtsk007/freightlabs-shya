@@ -118,7 +118,7 @@ export function LaneMaker() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-blue-hover text-white shadow-lg shadow-brand-blue/20">
                 <Network className="w-4 h-4" />
-                <span className="font-semibold text-sm">LoadForge™ for Shippers & Brokers</span>
+                <span className="font-semibold text-sm">LoadForge™</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
@@ -137,8 +137,7 @@ export function LaneMaker() {
                   <Clock className="w-7 h-7 text-brand-blue" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">The Metric Hook</p>
-                  <p className="text-base font-semibold text-foreground">Reduce your time-to-cover by <strong>50%</strong> using our automated matching engine.</p>
+                  <p className="text-base font-semibold text-foreground">Reduce your time-to-cover by 50% using our automated matching engine.</p>
                 </div>
               </div>
 
@@ -375,20 +374,20 @@ export function LaneMaker() {
               The <span className="text-brand-blue">8-Point</span> Compliance Check
             </h2>
             <p className="text-xl text-muted-foreground">
-              We take risk off the road. Our automated system validates every carrier against <strong>8 strict safety protocols</strong> before dispatch. We automatically reject carriers that don&apos;t meet these standards.
+              We take risk off the road. Our automated system validates every carrier against 8 strict safety protocols before dispatch. We automatically reject carriers that don&apos;t meet these standards.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
-              { icon: FileCheck, label: 'Authority Status (Active MC/DOT)' },
-              { icon: Shield, label: 'Insurance Coverage' },
-              { icon: Truck, label: 'FMCSA Safety Rating' },
-              { icon: BarChart3, label: 'Inspection History' },
-              { icon: CheckCircle2, label: 'Fraud & Double-Brokering Check' },
-              { icon: Target, label: 'Equipment Type Validation' },
-              { icon: Users, label: 'Operational History' },
-              { icon: Shield, label: 'Driver Identity Verification' },
+              { icon: FileCheck, label: '1. Carrier Authority Status (Active MC/DOT)', num: '1' },
+              { icon: Shield, label: '2. Insurance Coverage Verification', num: '2' },
+              { icon: BarChart3, label: '3. FMCSA Safety Rating Analysis', num: '3' },
+              { icon: CheckCircle2, label: '4. Inspection History Review', num: '4' },
+              { icon: Shield, label: '5. Fraud & Double-Brokering Check', num: '5' },
+              { icon: Truck, label: '6. Equipment Type Validation', num: '6' },
+              { icon: Users, label: '7. Operational History & Performance', num: '7' },
+              { icon: Shield, label: '8. Driver Identity Verification', num: '8' },
             ].map((item, index) => (
               <motion.div
                 key={item.label}
@@ -429,7 +428,7 @@ export function LaneMaker() {
                   </div>
                   <div>
                     <p className="text-xl md:text-2xl font-medium mb-4 italic leading-relaxed">
-                      &quot;We were drowning in emails and spreadsheets. LaneMaker did not just organize us; it sped us up. We moved 30% more freight last quarter with the same team size.&quot;
+                      &quot;We were drowning in emails and spreadsheets. LoadForge didn&apos;t just organize us; it sped us up. We moved 30% more freight last quarter with the same team size.&quot;
                     </p>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full bg-brand-blue/20 flex items-center justify-center">
@@ -440,21 +439,6 @@ export function LaneMaker() {
                         <p className="text-white/70 text-sm">FMCG Brand</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/20">
-                  <div className="text-center">
-                    <p className="text-3xl font-bold text-brand-blue">+30%</p>
-                    <p className="text-sm text-white/70">More Freight Moved</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-3xl font-bold text-brand-blue">Same</p>
-                    <p className="text-sm text-white/70">Team Size</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-3xl font-bold text-brand-blue">-70%</p>
-                    <p className="text-sm text-white/70">Time-to-Book</p>
                   </div>
                 </div>
               </div>

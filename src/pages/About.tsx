@@ -191,9 +191,11 @@ export function About() {
                 We combine deep industry experience with advanced technology to solve freight&apos;s toughest challenges.
               </p>
 
-              <p className="text-lg text-blue-200/80 max-w-2xl mx-auto italic">
-                Decisions based on data, not opinions.
-              </p>
+              <div className="inline-block px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl mt-6">
+                <p className="text-lg text-white font-medium italic">
+                  Decisions based on data, not opinions.
+                </p>
+              </div>
 
               <div className="flex items-center justify-center gap-8 pt-8">
                 <div className="text-center">
@@ -237,7 +239,7 @@ export function About() {
               <span className="text-sm font-semibold text-brand-blue">Who We Are</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-brand-blue">Logistics Experts.</span> Technology Natives.
+              Logistics Experts. <span className="text-brand-blue">Technology Natives.</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               FreightLabs was founded on a belief that the trucking industry deserves better tools. We aren&apos;t just software developers; we are logistics professionals who understand the difference between a dry van and a reefer. We use AI to empower the human element, giving shippers and carriers the <strong>predictive data</strong> they need to make smarter business decisions.

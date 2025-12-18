@@ -144,36 +144,34 @@ export function Home() {
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                The Science of{' '}
+                The Engine of{' '}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-hover to-brand-blue">
-                  Moving Freight
+                  American Freight
                 </span>
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
-                We are building the most trusted, intelligent logistics ecosystem. Experience
-                Uber-style simplicity with enterprise-grade control.
+                A unified logistics platform combining AI-driven capacity with industrial-strength control. Move loads faster, smarter, and with total visibility.
               </p>
 
               <div className="flex items-center gap-3 p-4 bg-card border-l-4 border-brand-orange rounded-lg shadow-sm">
                 <BarChart3 className="w-6 h-6 text-brand-orange flex-shrink-0" />
                 <p className="text-sm font-medium">
-                  Industry average empty miles sit at <span className="font-bold text-foreground">20%</span>. Our
-                  network targets{' '}
-                  <span className="font-bold text-brand-orange">&lt;5%</span>.
+                  The industry average for empty miles sits at <span className="font-bold text-foreground">20%</span>. Our automated network targets{' '}
+                  <span className="font-bold text-brand-orange">&lt;5%</span>. Stop paying for air.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group">
-                  Initialize Your Ecosystem
+                  Access the Platform
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
                   variant="outline"
                   className="px-8 py-6 text-lg rounded-xl border-2 hover:bg-accent transition-all"
                 >
-                  See How It Works
+                  View Our Capabilities
                 </Button>
               </div>
 
@@ -264,11 +262,10 @@ export function Home() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-bold mb-4"
             >
-              Who Are You in the Ecosystem?
+              Built for the Backbone of the Supply Chain
             </motion.h2>
             <p className="text-xl text-muted-foreground">
-              Logistics is not one-size-fits-all. Select your path to see how the Lab optimizes
-              your specific variance.
+              Real-world logistics problems require data-driven solutions. Select your operation type to see the metrics that matter.
             </p>
           </div>
 
@@ -285,33 +282,33 @@ export function Home() {
                   <Truck className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">For Carriers & Fleets</h3>
-                <p className="text-sm text-green-600 dark:text-green-400 font-semibold mb-4">The Goal: Revenue Automation</p>
+                <p className="text-sm text-green-600 dark:text-green-400 font-semibold mb-4">The Goal: Maximize Revenue Per Mile (RPM)</p>
                 <p className="text-muted-foreground mb-6">
-                  The average carrier spends <span className="font-bold text-foreground">15 hours a week</span>{' '}
-                  searching for loads. That is lost revenue.
+                  The average carrier burns <span className="font-bold text-foreground">15 hours a week</span>{' '}
+                  just searching load boards. That is lost time and lost money.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-sm">Weekly Revenue Stability</p>
+                      <p className="font-semibold text-sm">+20% Weekly Revenue</p>
                       <p className="text-xs text-muted-foreground">
-                        &lt;5% variance in weekly paychecks
+                        Fleets on our platform report higher consistency
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-sm">Hands-Free Dispatch</p>
-                      <p className="text-xs text-muted-foreground">Our AI negotiates while you sleep</p>
+                      <p className="font-semibold text-sm">0 Hours Dispatching</p>
+                      <p className="text-xs text-muted-foreground">Our algorithms negotiate and book consecutive loads while you drive</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold text-sm">98% Asset Utilization</p>
-                      <p className="text-xs text-muted-foreground">We do not let your truck sit</p>
+                      <p className="text-xs text-muted-foreground">We link headhauls and backhauls to keep your wheels turning</p>
                     </div>
                   </div>
                 </div>
@@ -319,7 +316,7 @@ export function Home() {
                   <p className="text-sm text-muted-foreground mb-3">Your Tool:</p>
                   <Link to="/routeforge">
                     <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white group/btn">
-                      Automate My Fleet
+                      Optimize My Fleet
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
@@ -339,18 +336,27 @@ export function Home() {
                   <Package className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">For Shippers</h3>
-                <p className="text-sm text-brand-blue font-semibold mb-4">The Goal: The Efficiency Equation</p>
+                <p className="text-sm text-brand-blue font-semibold mb-4">The Goal: Reliable Capacity at Market Rates</p>
                 <p className="text-muted-foreground mb-6">
                   Manual freight matching adds{' '}
-                  <span className="font-bold text-foreground">12-18% operational overhead</span> to every shipment.
+                  <span className="font-bold text-foreground">12-18% operational overhead</span> to every shipment you move.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-sm">Instant Capacity</p>
+                      <p className="font-semibold text-sm">Instant Tender Acceptance</p>
                       <p className="text-xs text-muted-foreground">
-                        Access thousands of verified trucks in seconds
+                        Match your freight with verified trucks already positioned in your lane
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-sm">100% Compliance Rating</p>
+                      <p className="text-xs text-muted-foreground">
+                        Every load is screened by our automated 8-Point Check
                       </p>
                     </div>
                   </div>
@@ -359,16 +365,7 @@ export function Home() {
                     <div>
                       <p className="font-semibold text-sm">Cost Reduction</p>
                       <p className="text-xs text-muted-foreground">
-                        Data-driven matching lowers rates
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-sm">100% Compliance</p>
-                      <p className="text-xs text-muted-foreground">
-                        Automated EIN/TIN checks on every load
+                        Dynamic matching lowers rates without compromising on-time performance
                       </p>
                     </div>
                   </div>
@@ -377,7 +374,7 @@ export function Home() {
                   <p className="text-sm text-muted-foreground mb-3">Your Tool:</p>
                   <Link to="/lanemaker">
                     <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700 text-white group/btn">
-                      Optimize My Logistics
+                      Find Capacity Now
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
@@ -397,35 +394,35 @@ export function Home() {
                   <Building2 className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">For 3PLs & Brokers</h3>
-                <p className="text-sm text-amber-600 dark:text-amber-400 font-semibold mb-4">The Goal: Execution Automation</p>
+                <p className="text-sm text-amber-600 dark:text-amber-400 font-semibold mb-4">The Goal: High-Volume Execution</p>
                 <p className="text-muted-foreground mb-6">
-                  Administrative tasks consume <span className="font-bold text-foreground">40% of a broker&apos;s day</span>.
+                  Administrative tasks and check-calls consume <span className="font-bold text-foreground">40% of a broker&apos;s day</span>.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-sm">Operational Velocity</p>
+                      <p className="font-semibold text-sm">5x Faster Matching</p>
                       <p className="text-xs text-muted-foreground">
-                        50+ loads per broker without adding headcount
+                        Cover loads in minutes, not hours, by matching freight to live truck assets
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-sm">Closed-Loop Logic</p>
+                      <p className="font-semibold text-sm">Scale Operations</p>
                       <p className="text-xs text-muted-foreground">
-                        Enhanced matching reduces overhead
+                        Enable your team to handle 50+ loads per broker without adding headcount
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-sm">Scalability</p>
+                      <p className="font-semibold text-sm">Automated Workflows</p>
                       <p className="text-xs text-muted-foreground">
-                        Handle more volume with fewer clicks
+                        Reduce administrative overhead with intelligent automation
                       </p>
                     </div>
                   </div>
@@ -434,7 +431,7 @@ export function Home() {
                   <p className="text-sm text-muted-foreground mb-3">Your Tool:</p>
                   <Link to="/lanemaker">
                     <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white group/btn">
-                      Upgrade My Brokerage
+                      Scale My Operations
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
@@ -456,7 +453,7 @@ export function Home() {
             >
               <div className="px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold flex items-center gap-2">
                 <Route className="w-4 h-4" />
-                RouteForge™ | The Revenue Architect
+                RouteForge™
               </div>
             </motion.div>
 
@@ -468,12 +465,10 @@ export function Home() {
                 className="space-y-6"
               >
                 <h2 className="text-4xl md:text-5xl font-bold">
-                  Automate Your Revenue.{' '}
-                  <span className="text-green-600">Stop Guessing.</span>
+                  Dispatch Automation for the Modern Fleet
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Manual dispatch is a failed experiment. It relies on opinions, phone calls, and luck.
-                  RouteForge™ is an AI-powered load orchestration engine that designs end-to-end revenue paths.
+                  RouteForge™ is an intelligent routing tool that builds your schedule for you. By analyzing 50+ variables—including your equipment type (Dry Van, Reefer, Flatbed) and preferred lanes—it negotiates and books consecutive loads.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -491,23 +486,15 @@ export function Home() {
 
                 <div className="p-4 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl">
                   <p className="text-lg font-semibold text-green-800 dark:text-green-200">
-                    +20% Average Weekly Revenue
-                  </p>
-                  <p className="text-sm text-green-600 dark:text-green-400">
-                    For fleets switching from spot market to RouteForge
+                    Stop driving empty. Our system is designed to reduce deadhead miles by an average of 15% in your first month.
                   </p>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
                   <Link to="/routeforge">
                     <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-6 py-5 rounded-xl group">
-                      Start Your RouteForge Trial
+                      See RouteForge Features
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                  <Link to="/routeforge">
-                    <Button variant="outline" className="px-6 py-5 rounded-xl">
-                      View Technical Specs
                     </Button>
                   </Link>
                 </div>
@@ -563,7 +550,7 @@ export function Home() {
             >
               <div className="px-4 py-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-blue-hover text-white text-sm font-semibold flex items-center gap-2">
                 <Network className="w-4 h-4" />
-                LaneMaker™ | The Matching Engine
+                LoadForge™
               </div>
             </motion.div>
 
@@ -610,12 +597,11 @@ export function Home() {
                 className="space-y-6 order-1 lg:order-2"
               >
                 <h2 className="text-4xl md:text-5xl font-bold">
-                  Perfect Matching.{' '}
-                  <span className="text-brand-blue">Zero Empty Miles.</span>
+                  Secure Capacity.{' '}
+                  <span className="text-brand-blue">Mitigate Risk.</span>
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Inefficiency and empty miles are the enemies of profit. LaneMaker™ analyzes space, weight,
-                  distance, and equipment to find the perfect carrier instantly.
+                  LoadForge™ is the command center for shipping logistics. It doesn&apos;t just post loads; it intelligently matches your freight with verified, high-performance carriers. From tender to delivery, automate your supply chain with industrial precision.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -633,23 +619,15 @@ export function Home() {
 
                 <div className="p-4 bg-brand-azure dark:bg-brand-navy-light border border-brand-blue/20 rounded-xl">
                   <p className="text-lg font-semibold text-brand-navy dark:text-brand-slate-50">
-                    Drastically reduce operational overhead
-                  </p>
-                  <p className="text-sm text-brand-blue">
-                    and shipping costs with intelligent matching
+                    Inconsistent data causes 1 in 4 invoices to have discrepancies. LoadForge™ unifies your data to eliminate billing errors.
                   </p>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
                   <Link to="/lanemaker">
                     <Button className="bg-gradient-to-r from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700 text-white px-6 py-5 rounded-xl group">
-                      Deploy LaneMaker
+                      See LoadForge Features
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                  <Link to="/lanemaker">
-                    <Button variant="outline" className="px-6 py-5 rounded-xl">
-                      View Technical Specs
                     </Button>
                   </Link>
                 </div>
@@ -673,11 +651,10 @@ export function Home() {
                 <span className="text-sm font-semibold text-brand-orange">Data Over Opinions</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                The <span className="text-brand-blue">Vision</span> & Trust
+                Technology Built for the <span className="text-brand-blue">Long Haul</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                FreightLabs is not just a brokerage. We are a next-generation ecosystem combining
-                AI, automation, and a culture of experimentation to reshape how freight moves across America.
+                Trust signals that matter to modern logistics operations
               </p>
             </motion.div>
 
@@ -690,9 +667,9 @@ export function Home() {
                 className="bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy-light dark:to-brand-navy rounded-2xl p-6 border border-border"
               >
                 <Shield className="w-10 h-10 text-green-600 mb-4" />
-                <h3 className="font-bold text-lg mb-2">Verified Compliance</h3>
+                <h3 className="font-bold text-lg mb-2">Verified Network</h3>
                 <p className="text-sm text-muted-foreground">
-                  Automated safety checks on every carrier, every single time. No exceptions.
+                  100% of carriers are monitored for authority and safety.
                 </p>
               </motion.div>
 
@@ -704,9 +681,9 @@ export function Home() {
                 className="bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy-light dark:to-brand-navy rounded-2xl p-6 border border-border"
               >
                 <Network className="w-10 h-10 text-brand-blue mb-4" />
-                <h3 className="font-bold text-lg mb-2">Scalable Architecture</h3>
+                <h3 className="font-bold text-lg mb-2">Data Security</h3>
                 <p className="text-sm text-muted-foreground">
-                  Built for Enterprise needs from day one. Infrastructure that grows with you.
+                  Enterprise-grade encryption for your lane data.
                 </p>
               </motion.div>
 
@@ -717,10 +694,10 @@ export function Home() {
                 transition={{ delay: 0.3 }}
                 className="bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy-light dark:to-brand-navy rounded-2xl p-6 border border-border"
               >
-                <TrendingUp className="w-10 h-10 text-brand-orange mb-4" />
-                <h3 className="font-bold text-lg mb-2">The Future</h3>
+                <Clock className="w-10 h-10 text-brand-orange mb-4" />
+                <h3 className="font-bold text-lg mb-2">24/7 Support</h3>
                 <p className="text-sm text-muted-foreground">
-                  Integrating Factoring, Telematics, and Franchise 3PL networks into one ecosystem.
+                  Real logistics professionals, not just chatbots.
                 </p>
               </motion.div>
             </div>
@@ -752,6 +729,13 @@ export function Home() {
                     </p>
                   </div>
                 </div>
+                <div className="mt-6 pt-6 border-t border-white/20 text-center">
+                  <Link to="/about">
+                    <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-xl">
+                      Meet the Team
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -774,7 +758,7 @@ export function Home() {
             </p>
             <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group">
               <Zap className="w-5 h-5 mr-2" />
-              Initialize Your Ecosystem
+              Access the Platform
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>

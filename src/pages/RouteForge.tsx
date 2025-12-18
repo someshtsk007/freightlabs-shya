@@ -28,52 +28,52 @@ export function RouteForge() {
   const steps = [
     {
       step: '01',
-      title: 'Input Your Parameters',
-      description: 'Tell the Lab your equipment type, home base, and preferred regions. Set your time windows and revenue goals.',
+      title: 'Set Your Parameters',
+      description: 'Input your equipment, home base, and Hours of Service (HOS).',
       icon: Settings,
     },
     {
       step: '02',
-      title: 'The Reactor Analysis',
-      description: 'Our engine scans thousands of lanes instantly to find "Revenue Paths," not just single loads. We calculate return trips before you leave.',
+      title: 'Route Optimization',
+      description: 'Our AI scans thousands of lanes to build a "Revenue Path"—connecting multiple loads into a continuous schedule.',
       icon: Brain,
     },
     {
       step: '03',
-      title: 'Execute & Earn',
-      description: 'You get a schedule. You drive. We handle the paperwork, negotiations, and load matching. Pure revenue automation.',
+      title: 'Auto-Book',
+      description: 'Approve the rates and drive.',
       icon: Play,
     },
   ];
 
   const features = [
     {
-      icon: DollarSign,
-      title: 'Predictable Revenue',
-      description: 'Flatten the peaks and valleys of income. Know what you will make this week, not just today.',
-      stat: '<5%',
-      statLabel: 'Weekly variance target',
-    },
-    {
-      icon: Users,
-      title: 'Dispatcherless Operations',
-      description: 'Perfect for Owner-Operators who want to drive, not dial. AI handles negotiations 24/7.',
-      stat: '15 hrs',
-      statLabel: 'Saved per week',
-    },
-    {
       icon: Navigation,
-      title: 'Smart Routing',
-      description: 'We calculate the return trip before you even leave, minimizing deadhead miles completely.',
-      stat: '-15%',
-      statLabel: 'Deadhead reduction',
+      title: 'Intelligent Backhaul Matching',
+      description: 'We secure your return trip before you even pick up the first load.',
+      stat: 'Auto',
+      statLabel: 'Return booking',
     },
     {
-      icon: Calendar,
-      title: 'Weekly Revenue Lock',
-      description: 'Get advance visibility into your weekly earnings. No more guessing, just predictable income.',
-      stat: '+20%',
-      statLabel: 'Average revenue increase',
+      icon: Clock,
+      title: 'HOS Optimization',
+      description: 'Routes are calculated to maximize your legal driving hours.',
+      stat: 'Max',
+      statLabel: 'Driving hours',
+    },
+    {
+      icon: BarChart3,
+      title: 'Market Rate Intelligence',
+      description: 'Our system analyzes real-time lane data to ensure you are paid fair market value.',
+      stat: 'Fair',
+      statLabel: 'Market value',
+    },
+    {
+      icon: DollarSign,
+      title: 'Revenue Stability',
+      description: 'Consistent weekly earnings with minimal variance in the volatile spot market.',
+      stat: '<5%',
+      statLabel: 'Weekly variance',
     },
   ];
 
@@ -169,19 +169,18 @@ export function RouteForge() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg shadow-green-500/20">
                 <Route className="w-4 h-4" />
-                <span className="font-semibold text-sm">RouteForge™ | The Revenue Architect</span>
+                <span className="font-semibold text-sm">RouteForge™</span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                Your Fleet on{' '}
+                Your Virtual{' '}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600">
-                  Autopilot
+                  Fleet Manager
                 </span>
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
-                RouteForge™ replaces the chaos of the spot market with the precision of AI.
-                Stop guessing. Start engineering your revenue.
+                Maximize utilization and revenue with AI-driven route planning.
               </p>
 
               <div className="flex items-center gap-4 p-5 bg-card border-l-4 border-green-500 rounded-xl shadow-lg">
@@ -189,8 +188,7 @@ export function RouteForge() {
                   <TrendingUp className="w-7 h-7 text-green-600" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">15% Reduction</p>
-                  <p className="text-sm text-muted-foreground">in deadhead miles within the first 30 days</p>
+                  <p className="text-base font-bold text-foreground">Carriers using RouteForge™ see a variance of less than 5% in weekly revenue—delivering stability in a volatile market.</p>
                 </div>
               </div>
 
@@ -306,10 +304,10 @@ export function RouteForge() {
               <span className="text-sm font-semibold">How It Works</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Three Steps to <span className="text-green-600">Automated Revenue</span>
+              Three Steps to <span className="text-green-600">Automated Routes</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              From manual chaos to precision engineering. Let the Lab handle your dispatch.
+              From manual dispatch to AI-powered route planning in three simple steps.
             </p>
           </motion.div>
 
@@ -349,10 +347,10 @@ export function RouteForge() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Features Built for <span className="text-green-600">Revenue</span>
+              Feature <span className="text-green-600">Breakdown</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Every feature is designed to maximize your earning potential and minimize wasted time.
+              Everything you need to maximize utilization and minimize empty miles.
             </p>
           </motion.div>
 
@@ -408,7 +406,7 @@ export function RouteForge() {
                   </div>
                   <div>
                     <p className="text-xl md:text-2xl font-medium mb-4 italic leading-relaxed">
-                      &quot;I used to spend my evenings looking for a load back home. Now, RouteForge has my return trip booked before I even leave my driveway. It is like having a team of 10 dispatchers working for free.&quot;
+                      &quot;I used to spend my evenings looking for a load back home. Now, RouteForge has my return trip booked before I even leave my driveway. It&apos;s like having a team of 10 dispatchers working for free.&quot;
                     </p>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -416,24 +414,9 @@ export function RouteForge() {
                       </div>
                       <div>
                         <p className="font-semibold">Owner-Operator</p>
-                        <p className="text-white/70 text-sm">Texas Region</p>
+                        <p className="text-white/70 text-sm">TX</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/20">
-                  <div className="text-center">
-                    <p className="text-3xl font-bold">+$800</p>
-                    <p className="text-sm text-white/70">Weekly Revenue Increase</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-3xl font-bold">0 hrs</p>
-                    <p className="text-sm text-white/70">Evening Load Searching</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-3xl font-bold">100%</p>
-                    <p className="text-sm text-white/70">Return Loads Booked</p>
                   </div>
                 </div>
               </div>
@@ -451,19 +434,19 @@ export function RouteForge() {
             className="text-center max-w-3xl mx-auto text-white"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Engineer Your Revenue?
+              Keep your trucks moving
             </h2>
             <p className="text-xl text-white/80 mb-8">
-              Join thousands of carriers who have automated their dispatch and increased their weekly earnings.
+              Join the carrier network using RouteForge to maximize revenue and minimize empty miles.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-white text-green-700 hover:bg-green-50 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group">
-                Initialize RouteForge
+                Join the Carrier Network
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Link to="/contact">
                 <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-xl">
-                  Talk to a Scientist
+                  Contact Us
                 </Button>
               </Link>
             </div>

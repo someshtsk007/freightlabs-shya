@@ -121,7 +121,7 @@ export function Contact() {
 
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}

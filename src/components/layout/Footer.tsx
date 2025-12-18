@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
-import { BrandLogo } from '@/components/BrandLogo';
 
 export function Footer() {
   return (
@@ -9,7 +8,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="mb-4">
-              <BrandLogo className="h-10 w-auto" />
+              <img
+                src="/freightlabs-no_background.png"
+                alt="FreightLabs Logo"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               The Science of Moving Freight. Building the most trusted, intelligent logistics ecosystem.

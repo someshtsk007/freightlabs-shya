@@ -17,26 +17,25 @@ export function MaskedTextReveal({
 }: MaskedTextRevealProps) {
   const animationProps = useViewportTrigger
     ? {
-        initial: { y: '100%', opacity: 0 },
-        whileInView: { y: 0, opacity: 1 },
+        initial: { opacity: 0, y: 20 },
+        whileInView: { opacity: 1, y: 0 },
         viewport: { once: true, amount: 0.2 },
       }
     : {
-        initial: { y: '100%', opacity: 0 },
-        animate: { y: 0, opacity: 1 },
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
       };
 
   return (
-    <div className={`overflow-hidden ${className}`}>
-      <motion.div
-        {...animationProps}
-        transition={{
-          ...fluidRevealTransition,
-          delay,
-        }}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      className={className}
+      {...animationProps}
+      transition={{
+        ...fluidRevealTransition,
+        delay,
+      }}
+    >
+      {children}
+    </motion.div>
   );
 }

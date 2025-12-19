@@ -71,6 +71,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/faq" className="text-sm text-muted-foreground hover:text-brand-blue transition-colors inline-flex items-center gap-1 group">
+                  FAQs
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
                 <Link to="/careers" className="text-sm text-muted-foreground hover:text-brand-blue transition-colors inline-flex items-center gap-1 group">
                   Careers
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />

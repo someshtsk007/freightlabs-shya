@@ -8,6 +8,8 @@ import { AnimatedSection } from '@/components/shared/AnimatedSection';
 import { AnimatedHeading } from '@/components/shared/AnimatedHeading';
 import { MaskedTextReveal } from '@/components/shared/MaskedTextReveal';
 import { ContactModal } from '@/components/shared/ContactModal';
+import { FAQSection } from '@/components/faq/FAQSection';
+import { getFeaturedFAQs, getFAQsByCategory } from '@/data/faqData';
 import { staggeredRevealVariants, fluidRevealTransition, revealViewport, getStaggerDelay } from '@/lib/animation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -795,6 +797,13 @@ export function Home() {
           </div>
         </div>
       </AnimatedSection>
+
+      <FAQSection
+        faqs={getFeaturedFAQs(6)}
+        title="Frequently Asked Questions"
+        subtitle="Find answers to common questions about FreightLabs"
+        className="bg-white dark:bg-slate-950"
+      />
 
       <AnimatedSection className="py-12 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
         <div className="container mx-auto px-4">

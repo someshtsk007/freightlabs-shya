@@ -27,6 +27,8 @@ import { Card } from '@/components/ui/card';
 import { AnimatedCounter } from '@/components/shared/AnimatedCounter';
 import { MaskedTextReveal } from '@/components/shared/MaskedTextReveal';
 import { ContactModal } from '@/components/shared/ContactModal';
+import { FAQSection } from '@/components/faq/FAQSection';
+import { faqData } from '@/data/faqData';
 
 export function LoadForge() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -428,6 +430,13 @@ export function LoadForge() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        faqs={faqData.filter(faq => faq.category === 'shipper' || faq.category === '3pl-broker')}
+        title="Shipper & Broker FAQs"
+        subtitle="Common questions about using LoadForge for freight management"
+        className="bg-brand-azure dark:bg-brand-navy-light/30"
+      />
 
       <section className="py-12 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
         <div className="container mx-auto px-4">

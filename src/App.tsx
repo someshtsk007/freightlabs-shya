@@ -7,6 +7,7 @@ import { RouteForge } from '@/pages/RouteForge';
 import { LoadForge } from '@/pages/LoadForge';
 import { About } from '@/pages/About';
 import { Contact } from '@/pages/Contact';
+import FAQ from '@/pages/FAQ';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="loadforge" element={<LoadForge />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="faq" element={<FAQ />} />
             </Route>
           </Routes>
         </SmoothScroll>

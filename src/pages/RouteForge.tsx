@@ -27,6 +27,8 @@ import { Card } from '@/components/ui/card';
 import { AnimatedCounter } from '@/components/shared/AnimatedCounter';
 import { MaskedTextReveal } from '@/components/shared/MaskedTextReveal';
 import { ContactModal } from '@/components/shared/ContactModal';
+import { FAQSection } from '@/components/faq/FAQSection';
+import { getFAQsByCategory } from '@/data/faqData';
 
 export function RouteForge() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -378,6 +380,13 @@ export function RouteForge() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        faqs={getFAQsByCategory('carrier')}
+        title="Carrier FAQs"
+        subtitle="Common questions from carriers and owner-operators"
+        className="bg-green-50 dark:bg-green-950/20"
+      />
 
       <section className="py-12 bg-gradient-to-r from-green-600 to-emerald-600">
         <div className="container mx-auto px-4">

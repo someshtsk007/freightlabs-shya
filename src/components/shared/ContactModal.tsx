@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, CheckCircle2, Loader2, Truck, Package, Building2, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -26,21 +26,6 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = '0px';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    };
-  }, [isOpen]);
 
   const userTypes = [
     { value: 'carrier', label: 'Carrier', icon: Truck, color: 'green' },
@@ -128,30 +113,27 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
           />
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="w-full max-w-2xl my-8 relative"
-              onClick={(e) => e.stopPropagation()}
+              className="pointer-events-auto w-full max-w-2xl max-h-[90vh] overflow-y-auto"
             >
               <Card className="relative bg-card border-2 shadow-2xl">
-                <div className="sticky top-0 z-20 flex justify-end p-4 bg-card/95 backdrop-blur-sm border-b border-border/40">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={onClose}
-                    className="hover:bg-accent rounded-full"
-                  >
-                    <X className="w-5 h-5" />
-                  </Button>
-                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={onClose}
+                  className="absolute top-4 right-4 z-10 hover:bg-accent rounded-full"
+                >
+                  <X className="w-5 h-5" />
+                </Button>
 
-                <div className="p-8 pt-4">
+                <div className="p-8">
                   {isSubmitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}

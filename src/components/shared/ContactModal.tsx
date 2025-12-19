@@ -147,7 +147,7 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
             className="fixed inset-0 bg-black/70 backdrop-blur-md z-[9998]"
             aria-hidden="true"
           />
-          <div className="fixed z-[9999] flex items-center justify-center overflow-hidden pointer-events-auto left-0 right-0 top-24 bottom-24 sm:top-20 sm:bottom-20 md:top-24 md:bottom-32 lg:top-32 lg:bottom-40 p-4">
+          <div className="fixed z-[9999] flex items-center justify-center overflow-hidden pointer-events-auto left-0 right-0 top-24 bottom-24 sm:top-20 sm:bottom-20 md:top-12 md:bottom-12 lg:top-12 lg:bottom-12 p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -169,7 +169,7 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
                   </Button>
                 </div>
 
-                <div className="p-4 sm:p-6 md:p-8 pt-2 sm:pt-3 md:pt-4 overflow-y-auto flex-1 overscroll-contain">
+                <div className="p-4 sm:p-5 md:p-6 lg:p-6 pt-2 sm:pt-3 md:pt-4 overflow-y-auto flex-1 overscroll-contain">
                   {isSubmitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -187,14 +187,14 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
                     </motion.div>
                   ) : (
                     <>
-                      <div className="mb-6 sm:mb-8">
+                      <div className="mb-5 sm:mb-6">
                         <h2 className="text-2xl sm:text-3xl font-bold mb-2">Get Started with FreightLabs</h2>
                         <p className="text-sm sm:text-base text-muted-foreground">
                           Fill out the form below and our team will reach out to schedule a personalized demo.
                         </p>
                       </div>
 
-                      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                         <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
                           <div className="space-y-1.5">
                             <Label htmlFor="modal-name" className="text-xs sm:text-sm">Full Name *</Label>

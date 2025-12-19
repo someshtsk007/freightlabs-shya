@@ -121,30 +121,104 @@ export function Contact() {
 
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-stretch">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-8 border-2">
-                <h2 className="text-2xl font-bold mb-2">Contact Form</h2>
-                <p className="text-muted-foreground mb-8">Fill out the form below and we will get back to you shortly.</p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-2xl mx-auto mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-lg text-muted-foreground">
+              Have questions about our platform? Our team is ready to help you optimize your logistics operations.
+            </p>
+          </motion.div>
 
-                {isSubmitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
-                  >
-                    <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle2 className="w-10 h-10 text-green-600" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
-                    <p className="text-muted-foreground">Our team will review your request and respond shortly.</p>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8 mb-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+            >
+              <Card className="p-6 border-2 h-full hover:border-brand-blue/50 transition-all hover:shadow-lg">
+                <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-4">
+                  <MapPin className="w-6 h-6 text-brand-blue" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Visit Us</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  1621 Central Avenue, Suite 58586<br />
+                  Cheyenne, WY 82201<br />
+                  United States
+                </p>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <Card className="p-6 border-2 h-full hover:border-brand-blue/50 transition-all hover:shadow-lg">
+                <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-4">
+                  <Phone className="w-6 h-6 text-brand-blue" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Call Us</h3>
+                <a href="tel:+18175208170" className="text-sm text-brand-blue hover:underline block mb-2">
+                  +1 817 520 8170
+                </a>
+                <p className="text-xs text-muted-foreground">
+                  Mon-Fri: 6:00 AM - 8:00 PM PST<br/>
+                  Sat: 8:00 AM - 4:00 PM PST
+                </p>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <Card className="p-6 border-2 h-full hover:border-brand-blue/50 transition-all hover:shadow-lg">
+                <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-4">
+                  <Mail className="w-6 h-6 text-brand-blue" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Email Us</h3>
+                <a href="mailto:info@FreightLabs.io" className="text-sm text-brand-blue hover:underline block mb-3">
+                  info@FreightLabs.io
+                </a>
+                <p className="text-xs text-muted-foreground">
+                  Response time: 2-4 hours
+                </p>
+              </Card>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Card className="p-8 border-2 max-w-2xl mx-auto">
+              <h2 className="text-2xl font-bold mb-2">Send Us a Message</h2>
+              <p className="text-muted-foreground mb-8">Fill out the form below and we will get back to you shortly.</p>
+
+              {isSubmitted ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-12"
+                >
+                  <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 className="w-10 h-10 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
+                  <p className="text-muted-foreground">Our team will review your request and respond shortly.</p>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
                       <Input
@@ -168,151 +242,80 @@ export function Contact() {
                         className="h-12"
                       />
                     </div>
+                  </div>
 
-                    <div className="space-y-2">
-                      <Label>I am a:</Label>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        {contactTypes.map((type) => (
-                          <button
-                            key={type.value}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, type: type.value })}
-                            className={`p-3 rounded-xl border-2 transition-all flex flex-col items-center gap-2 ${
-                              formData.type === type.value
-                                ? 'border-brand-blue bg-brand-azure dark:bg-brand-navy-light'
-                                : 'border-border hover:border-brand-blue/50'
-                            }`}
-                          >
-                            <type.icon className={`w-5 h-5 ${
-                              formData.type === type.value ? 'text-brand-blue' : 'text-muted-foreground'
-                            }`} />
-                            <span className={`text-xs font-medium ${
-                              formData.type === type.value ? 'text-brand-blue' : 'text-muted-foreground'
-                            }`}>
-                              {type.label}
-                            </span>
-                          </button>
-                        ))}
-                      </div>
+                  <div className="space-y-2">
+                    <Label>I am a:</Label>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      {contactTypes.map((type) => (
+                        <button
+                          key={type.value}
+                          type="button"
+                          onClick={() => setFormData({ ...formData, type: type.value })}
+                          className={`p-3 rounded-xl border-2 transition-all flex flex-col items-center gap-2 ${
+                            formData.type === type.value
+                              ? 'border-brand-blue bg-brand-azure dark:bg-brand-navy-light'
+                              : 'border-border hover:border-brand-blue/50'
+                          }`}
+                        >
+                          <type.icon className={`w-5 h-5 ${
+                            formData.type === type.value ? 'text-brand-blue' : 'text-muted-foreground'
+                          }`} />
+                          <span className={`text-xs font-medium ${
+                            formData.type === type.value ? 'text-brand-blue' : 'text-muted-foreground'
+                          }`}>
+                            {type.label}
+                          </span>
+                        </button>
+                      ))}
                     </div>
+                  </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="volume">Fleet Size / Volume</Label>
-                      <Input
-                        id="volume"
-                        value={formData.volume}
-                        onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
-                        placeholder="e.g., 50 trucks or 1000 loads/month"
-                        className="h-12"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="volume">Fleet Size / Volume</Label>
+                    <Input
+                      id="volume"
+                      value={formData.volume}
+                      onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
+                      placeholder="e.g., 50 trucks or 1000 loads/month"
+                      className="h-12"
+                    />
+                  </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <textarea
-                        id="message"
-                        required
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Tell us about your freight challenges and what you are looking to achieve..."
-                        rows={6}
-                        className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <textarea
+                      id="message"
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Tell us about your freight challenges and what you are looking to achieve..."
+                      rows={5}
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    />
+                  </div>
 
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting || !formData.type}
-                      className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white py-6 text-lg rounded-xl"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                          Sending Message...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="mr-2 w-5 h-5" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                )}
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <Card className="p-6 border-2">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-brand-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Corporate HQ</h3>
-                    <p className="text-muted-foreground">
-                      1621 Central Avenue, Suite 58586<br />
-                      Cheyenne, WY 82201<br />
-                      United States
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-brand-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">General Inquiries</h3>
-                    <a href="mailto:info@FreightLabs.io" className="text-brand-blue hover:underline">
-                      info@FreightLabs.io
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-brand-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Main Line</h3>
-                    <a href="tel:+18175208170" className="text-brand-blue hover:underline">
-                      +1 817 520 8170
-                    </a>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 border-2 bg-gradient-to-br from-brand-navy to-brand-navy-light text-white">
-                <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-brand-blue" />
-                  Business Hours
-                </h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-white/70">Monday - Friday</span>
-                    <span>6:00 AM - 8:00 PM PST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/70">Saturday</span>
-                    <span>8:00 AM - 4:00 PM PST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/70">Sunday</span>
-                    <span>Emergency Only</span>
-                  </div>
-                </div>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <p className="text-xs text-white/60">
-                    AI-powered systems operate 24/7 for automated matching and dispatch.
-                  </p>
-                </div>
-              </Card>
-            </motion.div>
-          </div>
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting || !formData.type}
+                    className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white py-6 text-lg rounded-xl"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                        Sending Message...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2 w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              )}
+            </Card>
+          </motion.div>
         </div>
       </section>
 

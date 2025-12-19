@@ -29,16 +29,23 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
 
   useEffect(() => {
     if (isOpen) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = '0px';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.style.position = 'relative';
     } else {
+      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
       document.body.style.paddingRight = '';
+      document.body.style.position = '';
     }
 
     return () => {
+      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
       document.body.style.paddingRight = '';
+      document.body.style.position = '';
     };
   }, [isOpen]);
 
@@ -128,30 +135,32 @@ export function ContactModal({ isOpen, onClose, defaultInterest = 'general', sou
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
+            className="fixed inset-0 bg-black/70 backdrop-blur-md z-[9998]"
+            aria-hidden="true"
           />
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto">
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 overflow-y-auto pointer-events-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="w-full max-w-2xl my-8 relative"
+              className="w-full max-w-2xl my-8 relative pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <Card className="relative bg-card border-2 shadow-2xl">
-                <div className="sticky top-0 z-20 flex justify-end p-4 bg-card/95 backdrop-blur-sm border-b border-border/40">
+              <Card className="relative bg-card border-2 shadow-2xl max-h-[90vh] flex flex-col">
+                <div className="sticky top-0 z-20 flex justify-end p-4 bg-card/98 backdrop-blur-sm border-b border-border/40 flex-shrink-0">
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={onClose}
-                    className="hover:bg-accent rounded-full"
+                    className="hover:bg-accent rounded-full w-10 h-10 hover:scale-110 transition-transform shadow-lg hover:shadow-xl"
+                    aria-label="Close modal"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-6 h-6" />
                   </Button>
                 </div>
 
-                <div className="p-8 pt-4">
+                <div className="p-8 pt-4 overflow-y-auto flex-1">
                   {isSubmitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}

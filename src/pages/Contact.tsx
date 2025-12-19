@@ -121,12 +121,11 @@ export function Contact() {
 
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 items-start">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-stretch">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-3"
             >
               <Card className="p-8 border-2">
                 <h2 className="text-2xl font-bold mb-2">Contact Form</h2>
@@ -247,7 +246,7 @@ export function Contact() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-2 space-y-6"
+              className="space-y-6"
             >
               <Card className="p-6 border-2">
                 <div className="flex items-start gap-4 mb-6">

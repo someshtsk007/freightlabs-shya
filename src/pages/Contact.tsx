@@ -133,19 +133,21 @@ export function Contact() {
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8 mb-8">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-6 mb-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
+              whileHover={{ y: -8 }}
             >
-              <Card className="p-6 border-2 h-full hover:border-brand-blue/50 transition-all hover:shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-4">
-                  <MapPin className="w-6 h-6 text-brand-blue" />
+              <Card className="p-8 border-2 border-brand-blue/20 h-full hover:border-brand-blue transition-all duration-300 hover:shadow-2xl hover:shadow-brand-blue/20 group relative overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-7 h-7 text-brand-blue" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Visit Us</h3>
-                <p className="text-sm text-muted-foreground mb-3">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   1621 Central Avenue, Suite 58586<br />
                   Cheyenne, WY 82201<br />
                   United States
@@ -158,16 +160,18 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
+              whileHover={{ y: -8 }}
             >
-              <Card className="p-6 border-2 h-full hover:border-brand-blue/50 transition-all hover:shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-4">
-                  <Phone className="w-6 h-6 text-brand-blue" />
+              <Card className="p-8 border-2 border-brand-blue/20 h-full hover:border-brand-blue transition-all duration-300 hover:shadow-2xl hover:shadow-brand-blue/20 group relative overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Phone className="w-7 h-7 text-brand-blue" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                <a href="tel:+18175208170" className="text-sm text-brand-blue hover:underline block mb-2">
+                <h3 className="font-bold text-lg mb-3">Call Us</h3>
+                <a href="tel:+18175208170" className="text-sm font-semibold text-brand-blue hover:text-brand-blue-hover transition-colors block mb-4">
                   +1 817 520 8170
                 </a>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   Mon-Fri: 6:00 AM - 8:00 PM PST<br/>
                   Sat: 8:00 AM - 4:00 PM PST
                 </p>
@@ -179,13 +183,15 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
+              whileHover={{ y: -8 }}
             >
-              <Card className="p-6 border-2 h-full hover:border-brand-blue/50 transition-all hover:shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-4">
-                  <Mail className="w-6 h-6 text-brand-blue" />
+              <Card className="p-8 border-2 border-brand-blue/20 h-full hover:border-brand-blue transition-all duration-300 hover:shadow-2xl hover:shadow-brand-blue/20 group relative overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-brand-azure dark:bg-brand-navy-light flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Mail className="w-7 h-7 text-brand-blue" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Email Us</h3>
-                <a href="mailto:info@FreightLabs.io" className="text-sm text-brand-blue hover:underline block mb-3">
+                <h3 className="font-bold text-lg mb-3">Email Us</h3>
+                <a href="mailto:info@FreightLabs.io" className="text-sm font-semibold text-brand-blue hover:text-brand-blue-hover transition-colors block mb-4">
                   info@FreightLabs.io
                 </a>
                 <p className="text-xs text-muted-foreground">
@@ -200,9 +206,9 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8 border-2 max-w-2xl mx-auto">
-              <h2 className="text-2xl font-bold mb-2">Send Us a Message</h2>
-              <p className="text-muted-foreground mb-8">Fill out the form below and we will get back to you shortly.</p>
+            <Card className="p-8 lg:p-12 border-2 border-brand-blue/20 max-w-2xl mx-auto hover:border-brand-blue/40 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-blue/10 backdrop-blur-sm">
+              <h2 className="text-3xl font-bold mb-3">Send Us a Message</h2>
+              <p className="text-muted-foreground mb-10">Fill out the form below and our team will get back to you as soon as possible.</p>
 
               {isSubmitted ? (
                 <motion.div
@@ -298,7 +304,7 @@ export function Contact() {
                   <Button
                     type="submit"
                     disabled={isSubmitting || !formData.type}
-                    className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white py-6 text-lg rounded-xl"
+                    className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue hover:to-brand-blue text-white py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl hover:shadow-brand-blue/40 transition-all duration-300 font-semibold disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>
@@ -345,10 +351,12 @@ export function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
               >
-                <Card className="p-6 h-full border-2 hover:border-brand-blue/50 transition-all hover:shadow-lg group">
-                  <div className={`w-14 h-14 rounded-xl ${line.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <line.icon className={`w-7 h-7 ${line.iconColor}`} />
+                <Card className="p-8 h-full border-2 border-opacity-20 hover:border-opacity-100 transition-all duration-300 hover:shadow-2xl group relative overflow-hidden backdrop-blur-sm" style={{borderColor: `var(--tw-border-color, ${line.iconColor})`}}>
+                  <div className={`absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-full`} style={{background: `linear-gradient(to bottom-left, ${line.iconColor}15, transparent)`}} />
+                  <div className={`w-16 h-16 rounded-2xl ${line.bgColor} flex items-center justify-center mb-6 group-hover:scale-125 transition-all duration-300 shadow-lg`} style={{boxShadow: `0 4px 20px ${line.iconColor}30`}}>
+                    <line.icon className={`w-8 h-8 ${line.iconColor}`} />
                   </div>
                   <h3 className="text-lg font-bold mb-2">{line.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{line.description}</p>
@@ -369,8 +377,15 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-brand-blue via-brand-blue-hover to-brand-blue relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="absolute top-1/2 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
+            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.15, 0.1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -378,18 +393,18 @@ export function Contact() {
             className="text-center max-w-3xl mx-auto text-white"
           >
             <MaskedTextReveal useViewportTrigger={true}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Prefer to Schedule a Demo?
               </h2>
             </MaskedTextReveal>
-            <p className="text-lg text-white/80 mb-8">
-              Book a personalized walkthrough of our platform with one of our logistics experts.
+            <p className="text-lg text-white/90 mb-10 leading-relaxed">
+              Book a personalized walkthrough of our platform with one of our logistics experts and discover how we can transform your operations.
             </p>
             <Button
               onClick={() => {
                 setIsModalOpen(true);
               }}
-              className="bg-white text-brand-blue hover:bg-blue-50 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+              className="bg-white text-brand-blue hover:bg-blue-50 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl hover:shadow-white/20 transition-all font-semibold"
             >
               Schedule Platform Demo
             </Button>

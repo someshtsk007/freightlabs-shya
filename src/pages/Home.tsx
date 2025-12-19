@@ -175,7 +175,7 @@ export function Home() {
                     setModalInterest('general');
                     setIsModalOpen(true);
                   }}
-                  className="bg-brand-orange hover:bg-brand-orange-hover text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all group"
+                  className="bg-gradient-to-r from-brand-orange to-brand-orange/80 hover:from-brand-orange hover:to-brand-orange text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl hover:shadow-brand-orange/40 transition-all duration-300 group font-semibold"
                 >
                   Request Platform Demo
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -183,7 +183,7 @@ export function Home() {
                 <Link to="/about">
                   <Button
                     variant="outline"
-                    className="px-8 py-6 text-lg rounded-xl border-2 hover:bg-accent transition-all"
+                    className="px-8 py-6 text-lg rounded-xl border-2 hover:bg-brand-blue/5 hover:border-brand-blue transition-all font-semibold"
                   >
                     Learn About Us
                   </Button>
@@ -295,13 +295,13 @@ export function Home() {
               viewport={revealViewport}
               variants={staggeredRevealVariants}
               transition={{ ...fluidRevealTransition, delay: getStaggerDelay(0) }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, y: -8 }}
               style={withGPU()}
               className="will-change-transform"
             >
-              <Card className="p-6 lg:p-8 h-full border-2 hover:border-green-500 transition-all hover:shadow-xl group relative overflow-hidden flex flex-col">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-green-500/10 to-transparent rounded-bl-full" />
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-green-500/20">
+              <Card className="p-6 lg:p-8 h-full border-2 border-green-500/20 hover:border-green-500 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20 group relative overflow-hidden flex flex-col backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-green-500/15 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-6 group-hover:scale-125 transition-all duration-300 shadow-lg shadow-green-500/30 group-hover:shadow-green-500/50">
                   <Truck className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">For Carriers & Fleets</h3>
@@ -335,10 +335,10 @@ export function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground mb-3">Your Tool:</p>
+                <div className="pt-4 border-t border-green-500/10">
+                  <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider font-semibold">Your Tool:</p>
                   <Link to="/routeforge">
-                    <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white group/btn">
+                    <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all duration-300 group/btn font-semibold">
                       Optimize My Fleet
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -354,13 +354,13 @@ export function Home() {
               viewport={revealViewport}
               variants={staggeredRevealVariants}
               transition={{ ...fluidRevealTransition, delay: getStaggerDelay(1) }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, y: -8 }}
               style={withGPU()}
               className="will-change-transform"
             >
-              <Card className="p-6 lg:p-8 h-full border-2 hover:border-brand-blue transition-all hover:shadow-xl group relative overflow-hidden flex flex-col">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-blue/10 to-transparent rounded-bl-full" />
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-blue to-brand-blue-hover flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-brand-blue/20">
+              <Card className="p-6 lg:p-8 h-full border-2 border-brand-blue/20 hover:border-brand-blue transition-all duration-300 hover:shadow-2xl hover:shadow-brand-blue/20 group relative overflow-hidden flex flex-col backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-brand-blue/15 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-blue-hover flex items-center justify-center mb-6 group-hover:scale-125 transition-all duration-300 shadow-lg shadow-brand-blue/30 group-hover:shadow-brand-blue/50">
                   <Package className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">For Shippers</h3>
@@ -398,10 +398,10 @@ export function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground mb-3">Your Tool:</p>
+                <div className="pt-4 border-t border-brand-blue/10">
+                  <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider font-semibold">Your Tool:</p>
                   <Link to="/loadforge">
-                    <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700 text-white group/btn">
+                    <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-blue-hover hover:from-brand-blue-hover hover:to-blue-700 text-white shadow-lg hover:shadow-2xl hover:shadow-brand-blue/40 transition-all duration-300 group/btn font-semibold">
                       Explore LoadForge
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -417,13 +417,13 @@ export function Home() {
               viewport={revealViewport}
               variants={staggeredRevealVariants}
               transition={{ ...fluidRevealTransition, delay: getStaggerDelay(2) }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, y: -8 }}
               style={withGPU()}
               className="will-change-transform"
             >
-              <Card className="p-6 lg:p-8 h-full border-2 hover:border-amber-500 transition-all hover:shadow-xl group relative overflow-hidden flex flex-col">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full" />
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-amber-500/20">
+              <Card className="p-6 lg:p-8 h-full border-2 border-amber-500/20 hover:border-amber-500 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/20 group relative overflow-hidden flex flex-col backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-amber-500/15 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 group-hover:scale-125 transition-all duration-300 shadow-lg shadow-amber-500/30 group-hover:shadow-amber-500/50">
                   <Building2 className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">For 3PLs & Brokers</h3>
@@ -460,10 +460,10 @@ export function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground mb-3">Your Tool:</p>
+                <div className="pt-4 border-t border-amber-500/10">
+                  <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider font-semibold">Your Tool:</p>
                   <Link to="/loadforge">
-                    <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white group/btn">
+                    <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-lg hover:shadow-2xl hover:shadow-amber-500/40 transition-all duration-300 group/btn font-semibold">
                       Explore LoadForge
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>

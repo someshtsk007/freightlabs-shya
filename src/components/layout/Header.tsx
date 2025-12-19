@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, ArrowRight } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 
@@ -35,7 +35,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
+          ? 'bg-background/80 dark:bg-background/70 backdrop-blur-xl border-b border-border/40 shadow-2xl'
           : 'bg-transparent'
       }`}
     >
@@ -49,24 +49,26 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors relative ${
+                className={`text-sm font-medium transition-all duration-300 relative px-3 py-2 rounded-lg ${
                   location.pathname === link.path
-                    ? 'text-primary'
-                    : 'text-foreground hover:text-primary'
+                    ? 'text-brand-blue'
+                    : 'text-foreground hover:text-brand-blue'
                 }`}
               >
-                {link.label}
-                {location.pathname === link.path && (
-                  <motion.div
-                    layoutId="activeNav"
-                    className="absolute -bottom-2 left-0 right-0 h-0.5 bg-primary"
-                  />
-                )}
+                <motion.div
+                  className={`absolute inset-0 rounded-lg transition-all duration-300 ${
+                    location.pathname === link.path
+                      ? 'bg-brand-blue/10 opacity-100'
+                      : 'bg-brand-blue/0 opacity-0 hover:opacity-100'
+                  }`}
+                  layoutId="navBg"
+                />
+                <span className="relative z-10">{link.label}</span>
               </Link>
             ))}
           </nav>
@@ -74,8 +76,9 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
             <Link to="/contact">
-              <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white shadow-md">
+              <Button className="bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue hover:to-brand-blue text-white shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
                 Get Started
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
@@ -99,9 +102,9 @@ export function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden border-t border-border backdrop-blur-md bg-background/95"
+            className="lg:hidden border-t border-border/40 backdrop-blur-xl bg-background/80"
           >
-            <nav className="flex flex-col py-4 space-y-1">
+            <nav className="flex flex-col py-6 space-y-1 px-4">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.path}
@@ -113,8 +116,8 @@ export function Header() {
                     to={link.path}
                     className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all ${
                       location.pathname === link.path
-                        ? 'bg-primary/10 text-primary shadow-sm'
-                        : 'text-foreground hover:bg-accent hover:translate-x-1'
+                        ? 'bg-brand-blue/10 text-brand-blue'
+                        : 'text-foreground hover:bg-brand-blue/5 hover:text-brand-blue hover:translate-x-1'
                     }`}
                   >
                     {link.label}
@@ -125,24 +128,25 @@ export function Header() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.2 }}
-                className="px-4 pt-3 pb-2 space-y-3"
+                className="pt-4 pb-2 space-y-3"
               >
                 <Link to="/contact">
-                  <Button className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white shadow-lg">
+                  <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 text-white shadow-lg hover:shadow-xl group">
                     Get Started
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <div className="pt-2 space-y-2 border-t border-border">
+                <div className="pt-4 space-y-2 border-t border-border/30">
                   <a
                     href="tel:+18175208170"
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors px-4 py-2"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors px-4 py-2 rounded-lg hover:bg-brand-blue/5"
                   >
                     <Phone className="w-4 h-4" />
                     +1 817 520 8170
                   </a>
                   <a
                     href="mailto:info@FreightLabs.io"
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors px-4 py-2"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-blue transition-colors px-4 py-2 rounded-lg hover:bg-brand-blue/5"
                   >
                     <Mail className="w-4 h-4" />
                     info@FreightLabs.io

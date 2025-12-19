@@ -119,7 +119,7 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-card">
+      <section className="py-12 md:py-16 bg-card">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -325,7 +325,7 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy dark:to-brand-navy-light">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy dark:to-brand-navy-light">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -377,7 +377,7 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-brand-blue via-brand-blue-hover to-brand-blue relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-brand-blue via-brand-blue-hover to-brand-blue relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-1/2 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"

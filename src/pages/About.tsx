@@ -108,7 +108,7 @@ export function About() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 pt-12 pb-16 flex items-center min-h-screen">
+        <div className="relative z-10 container mx-auto px-4 py-10 md:py-12 md:pb-16 flex items-center min-h-screen">
           <div className="max-w-4xl mx-auto text-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -164,7 +164,7 @@ export function About() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-slate-50 dark:from-brand-navy to-transparent" />
       </section>
 
-      <section className="py-12 bg-gradient-to-b from-brand-slate-50 to-white dark:from-brand-navy dark:to-brand-navy-light">
+      <section className="py-10 md:py-12 bg-gradient-to-b from-brand-slate-50 to-white dark:from-brand-navy dark:to-brand-navy-light">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -221,13 +221,13 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 bg-card">
+      <section className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/20 mb-6">
               <Atom className="w-4 h-4 text-brand-orange" />
@@ -269,7 +269,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 bg-gradient-to-br from-brand-slate-50 to-brand-azure dark:from-brand-navy dark:to-brand-navy-light">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-brand-slate-50 to-brand-azure dark:from-brand-navy dark:to-brand-navy-light">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -320,7 +320,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 bg-card">
+      <section className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -330,7 +330,7 @@ export function About() {
               className="bg-gradient-to-br from-brand-navy to-brand-navy-light rounded-3xl p-8 md:p-12 text-white relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,.05)_25%,rgba(59,130,246,.05)_50%,transparent_50%,transparent_75%,rgba(59,130,246,.05)_75%)] bg-[length:20px_20px]" />
-              
+
               <div className="relative z-10 text-center">
                 <div className="w-20 h-20 rounded-2xl bg-brand-blue/20 flex items-center justify-center mx-auto mb-6">
                   <Users className="w-10 h-10 text-brand-blue" />
@@ -362,7 +362,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy dark:to-brand-navy-light">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-brand-slate-50 to-white dark:from-brand-navy dark:to-brand-navy-light">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

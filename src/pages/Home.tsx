@@ -109,7 +109,7 @@ export function Home() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 pt-12 pb-12">
+        <div className="relative z-10 container mx-auto px-4 py-10 md:py-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -267,9 +267,9 @@ export function Home() {
         </div>
       </section>
 
-      <AnimatedSection className="py-12 bg-card">
+      <AnimatedSection className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -477,7 +477,7 @@ export function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-12 bg-gradient-to-br from-brand-slate-50 via-green-50/30 to-emerald-50/50 dark:from-brand-navy dark:via-green-950/20 dark:to-emerald-950/20">
+      <AnimatedSection className="py-10 md:py-12 bg-gradient-to-br from-brand-slate-50 via-green-50/30 to-emerald-50/50 dark:from-brand-navy dark:via-green-950/20 dark:to-emerald-950/20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -579,7 +579,7 @@ export function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-12 bg-gradient-to-br from-brand-slate-50 via-brand-azure to-blue-50/50 dark:from-brand-navy dark:via-brand-navy-light dark:to-blue-950/20">
+      <AnimatedSection className="py-10 md:py-12 bg-gradient-to-br from-brand-slate-50 via-brand-azure to-blue-50/50 dark:from-brand-navy dark:via-brand-navy-light dark:to-blue-950/20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -691,14 +691,14 @@ export function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-12 bg-card">
+      <AnimatedSection className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-10 md:mb-12"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/20 mb-6">
                 <Zap className="w-4 h-4 text-brand-orange" />
@@ -714,7 +714,7 @@ export function Home() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-3 gap-6 mb-10 md:mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -805,7 +805,7 @@ export function Home() {
         className="bg-white dark:bg-slate-950"
       />
 
-      <AnimatedSection className="py-12 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
+      <AnimatedSection className="py-10 md:py-12 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -813,10 +813,10 @@ export function Home() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto text-white"
           >
-            <AnimatedHeading className="text-fluid-3xl mb-6 text-white">
+            <AnimatedHeading className="text-fluid-3xl mb-5 md:mb-6 text-white">
               Ready to transform your freight operations?
             </AnimatedHeading>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-white/80 mb-6 md:mb-8">
               Join the ecosystem of shippers and carriers using AI-powered freight matching
             </p>
             <Button

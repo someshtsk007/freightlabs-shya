@@ -51,7 +51,7 @@ export function LoadForge() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 pt-12 pb-12">
+        <div className="relative z-10 container mx-auto px-4 py-10 md:py-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -206,7 +206,7 @@ export function LoadForge() {
         </div>
       </section>
 
-      <section id="features" className="py-12 bg-card">
+      <section id="features" className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div
@@ -315,13 +315,13 @@ export function LoadForge() {
         </div>
       </section>
 
-      <section className="py-12 bg-gradient-to-br from-brand-azure via-blue-50/50 to-white dark:from-brand-navy dark:via-brand-navy-light dark:to-brand-navy">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-brand-azure via-blue-50/50 to-white dark:from-brand-navy dark:via-brand-navy-light dark:to-brand-navy">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-12"
           >
             <MaskedTextReveal useViewportTrigger={true}>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -392,7 +392,7 @@ export function LoadForge() {
         </div>
       </section>
 
-      <section className="py-12 bg-card">
+      <section className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -402,9 +402,9 @@ export function LoadForge() {
               className="bg-gradient-to-br from-brand-navy to-brand-navy-light rounded-3xl p-8 md:p-12 text-white relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,.05)_25%,rgba(59,130,246,.05)_50%,transparent_50%,transparent_75%,rgba(59,130,246,.05)_75%)] bg-[length:20px_20px]" />
-              
+
               <div className="relative z-10">
-                <div className="flex items-start gap-6 mb-8">
+                <div className="flex items-start gap-6 mb-6 md:mb-8">
                   <div className="w-16 h-16 rounded-2xl bg-brand-blue/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-8 h-8 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
@@ -438,7 +438,7 @@ export function LoadForge() {
         className="bg-brand-azure dark:bg-brand-navy-light/30"
       />
 
-      <section className="py-12 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
+      <section className="py-10 md:py-12 bg-gradient-to-r from-brand-blue to-brand-blue-hover">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -447,11 +447,11 @@ export function LoadForge() {
             className="text-center max-w-3xl mx-auto text-white"
           >
             <MaskedTextReveal useViewportTrigger={true}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-5 md:mb-6">
                 Optimize your supply chain with industrial-grade tech
               </h2>
             </MaskedTextReveal>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-white/80 mb-6 md:mb-8">
               Join the network of shippers and 3PLs using LoadForge to streamline their operations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

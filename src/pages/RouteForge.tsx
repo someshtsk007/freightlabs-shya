@@ -103,7 +103,7 @@ export function RouteForge() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 pt-12 pb-12">
+        <div className="relative z-10 container mx-auto px-4 py-10 md:py-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -243,13 +243,13 @@ export function RouteForge() {
         </div>
       </section>
 
-      <section className="py-12 bg-card">
+      <section className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 mb-6">
               <Brain className="w-4 h-4" />
@@ -292,13 +292,13 @@ export function RouteForge() {
         </div>
       </section>
 
-      <section className="py-12 bg-gradient-to-br from-green-50 via-emerald-50/50 to-white dark:from-green-950/20 dark:via-emerald-950/10 dark:to-brand-navy">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-green-50 via-emerald-50/50 to-white dark:from-green-950/20 dark:via-emerald-950/10 dark:to-brand-navy">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-12 md:mb-16"
           >
             <MaskedTextReveal useViewportTrigger={true}>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -342,7 +342,7 @@ export function RouteForge() {
         </div>
       </section>
 
-      <section className="py-12 bg-card">
+      <section className="py-10 md:py-12 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -352,9 +352,9 @@ export function RouteForge() {
               className="bg-gradient-to-br from-green-600 to-emerald-700 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.03)_25%,rgba(255,255,255,.03)_50%,transparent_50%,transparent_75%,rgba(255,255,255,.03)_75%)] bg-[length:20px_20px]" />
-              
+
               <div className="relative z-10">
-                <div className="flex items-start gap-6 mb-8">
+                <div className="flex items-start gap-6 mb-6 md:mb-8">
                   <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0">
                     <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
@@ -388,7 +388,7 @@ export function RouteForge() {
         className="bg-green-50 dark:bg-green-950/20"
       />
 
-      <section className="py-12 bg-gradient-to-r from-green-600 to-emerald-600">
+      <section className="py-10 md:py-12 bg-gradient-to-r from-green-600 to-emerald-600">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -397,11 +397,11 @@ export function RouteForge() {
             className="text-center max-w-3xl mx-auto text-white"
           >
             <MaskedTextReveal useViewportTrigger={true}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-5 md:mb-6">
                 Keep your trucks moving
               </h2>
             </MaskedTextReveal>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-white/80 mb-6 md:mb-8">
               Join the carrier network using RouteForge to maximize revenue and minimize empty miles.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
